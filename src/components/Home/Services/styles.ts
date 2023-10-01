@@ -4,21 +4,28 @@ import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
   padding: 8em 0;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/contour-bg-1.webp');
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/images/contour-bg-1.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 `;
 
 export const StyledSection = styled.div`
-  > h2{
+  > h2 {
     color: var(--white);
     font-size: 3.2em;
     text-transform: capitalize;
+    font-family: var(--font-bodoni);
     font-weight: 900;
+    line-height: 1.2;
   }
 
-  > p{
+  > p {
     width: 40%;
     color: var(--white);
     font-family: var(--font-alegreya);
@@ -26,7 +33,7 @@ export const StyledSection = styled.div`
     font-size: 1.1em;
     font-weight: 300;
 
-    &::first-letter{
+    &::first-letter {
       text-transform: uppercase;
     }
   }
@@ -44,7 +51,7 @@ export const StyledService = styled.div`
   border-top: 0.01em solid var(--white);
   padding: 1em 0;
 
-  > h3{
+  > h3 {
     flex: 0.3;
     font-family: var(--font-bodoni);
     text-transform: capitalize;
@@ -53,7 +60,7 @@ export const StyledService = styled.div`
     font-size: 1.7em;
   }
 
-  >p{
+  > p {
     flex: 0.7;
     font-size: 1.01em;
     color: var(--white);
@@ -99,5 +106,5 @@ export const StyledExploreBtn = styled.div`
       background: var(--white);
       color: var(--black-1);
     }
-  } 
+  }
 `;

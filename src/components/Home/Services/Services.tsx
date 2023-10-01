@@ -6,7 +6,7 @@ import {
   StyledSection,
   StyledServices,
   StyledService,
-  StyledExploreBtn
+  StyledExploreBtn,
 } from "./styles";
 
 const Services = () => {
@@ -14,7 +14,11 @@ const Services = () => {
     <StyledWrapper>
       <Container>
         <StyledSection>
-          <h2>tailored services.<br/>exceptional results</h2>
+          <h2>
+            tailored services,
+            <br />
+            exceptional results
+          </h2>
           <p>
             orem ipsum dolor sit amet consectetur. Nisl erat non rhoncus eget
             velit et lectus ut. Est nunc facilisi sapien dictumst viverra. Amet
@@ -66,9 +70,9 @@ const Services = () => {
           <StyledExploreBtn>
             <Link href="#">
               <span>explore</span>
-            <span>
-              <PiArrowRightLight />
-            </span>
+              <span>
+                <PiArrowRightLight />
+              </span>
             </Link>
           </StyledExploreBtn>
         </StyledSection>
