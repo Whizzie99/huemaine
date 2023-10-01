@@ -33,6 +33,7 @@ const Hero: React.FC = () => {
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
             style={{ objectFit: "cover" }}
+            placeholder="blur"
             priority
           />
         </StyledImg1>
@@ -43,6 +44,7 @@ const Hero: React.FC = () => {
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
             style={{ objectFit: "cover" }}
+            placeholder="blur"
             priority
           />
         </StyledImg2>
