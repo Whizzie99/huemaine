@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import gsap from "gsap";
-import { ScrollTrigger } from 'gsap/all';
+import { ScrollTrigger } from "gsap/all";
 
 import Container from "@/components/shared/Container/Container";
 import { PiArrowRightLight } from "react-icons/pi";

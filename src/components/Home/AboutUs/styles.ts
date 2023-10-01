@@ -74,7 +74,7 @@ export const StyledTrustedBrands = styled.div`
   margin-top: 2em;
   padding: 2em 0;
 
-  h3{
+  h3 {
     text-align: center;
     text-transform: capitalize;
     font-family: var(--font-bodoni);
@@ -87,7 +87,6 @@ export const StyledMarquee = styled.div`
   width: 100% !important;
   position: relative;
   overflow-x: hidden;
-  
 `;
 
 export const StyledMarqueeItem = styled.div`
@@ -118,7 +117,7 @@ export const StyledMarqueeImage = styled.div`
     aspect-ratio: 2/3;
   }
 
-  &:last-child{
+  &:last-child {
     margin-right: 48px;
   }
 `;
