@@ -21,8 +21,8 @@ const Story = () => {
   const divRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const div = divRef.current;
-    const elemParent = div?.querySelector('.distort-img');
+    const div: any = divRef.current;
+    const elemParent = document.querySelector('.distort-img');
 
     new hoverEffect({
           parent: elemParent,
