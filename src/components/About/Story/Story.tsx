@@ -27,10 +27,6 @@ const Story = () => {
     new hoverEffect({
           parent: elemParent,
           intensity: 0.2,
-          // speedIn: el.dataset.speedin || undefined,
-          // speedOut: el.dataset.speedout || undefined,
-          // easing: el.dataset.easing || undefined,
-          // hover: el.dataset.hover || undefined,
           image1: img1.src,
           image2: img2.src,
           displacementImage: distortImg.src,
@@ -58,13 +54,6 @@ const Story = () => {
           </StyledLeftSection>
           <StyledRightSection>
             <StyledImg className="distort-img">
-              {/* <Image
-                src={img1}
-                alt="Topographic"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-                priority
-              /> */}
             </StyledImg>
           </StyledRightSection>
         </StyledSection>
