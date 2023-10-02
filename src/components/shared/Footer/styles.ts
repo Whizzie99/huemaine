@@ -122,7 +122,7 @@ export const StyledBtns = styled.div`
     }
   }
 
-  button{
+  button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,7 +139,6 @@ export const StyledBtns = styled.div`
     transition: all 0.3s ease;
 
     span {
-      
       &:first-child {
         font-family: var(--font-alegreya);
         font-weight: 300;
@@ -178,7 +177,7 @@ export const StyledSocials = styled.ul`
   display: flex;
   gap: 1em;
 
-  a{
+  a {
     font-family: var(--font-alegreya);
     text-decoration: none;
     color: var(--white);

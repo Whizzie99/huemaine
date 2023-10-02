@@ -15,14 +15,13 @@ import {
   StyledBtns,
   StyledBottomSection,
   StyledCopyright,
-  StyledSocials
+  StyledSocials,
 } from "./styles";
 
 import sample1 from "../../../../public/images/cross-roads.jpg";
 import sample2 from "../../../../public/images/shapes.jpeg";
 
 const Footer: React.FC = () => {
-
   const currentYear: number = new Date().getFullYear();
 
   return (
@@ -83,7 +82,9 @@ const Footer: React.FC = () => {
             </StyledSectionRight>
           </StyledTopSection>
           <StyledBottomSection>
-            <StyledCopyright>&copy; huemaine {currentYear}. all rights reserved</StyledCopyright>
+            <StyledCopyright>
+              &copy; huemaine {currentYear}. all rights reserved
+            </StyledCopyright>
             <StyledSocials>
               <li>
                 <Link href="#">linkedIn</Link>
