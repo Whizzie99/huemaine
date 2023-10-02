@@ -28,7 +28,7 @@ export const StyledHeading = styled.div`
     font-family: var(--font-bodoni);
     font-weight: 700;
     color: var(--white);
-    font-size: 2.5em;
+    font-size: 2.3em;
   }
 
   span {

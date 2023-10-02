@@ -39,3 +39,30 @@ export const StyledSection = styled.div`
     }
   }
 `;
+
+export const StyledDiveDeeper = styled.div`
+  margin: 0 auto;
+  margin-top: 8em;
+  width: 80%;
+
+  h2{
+    text-align: center;
+    color: var(--white);
+    font-family: var(--font-bodoni);
+    text-transform: capitalize;
+    font-size: 2.9em;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  p{
+    margin: 1em auto;
+    font-family: var(--font-alegreya);
+    color: var(--white);
+    font-size: 1.1em;
+    line-height: 2;
+    font-weight: 300;
+    text-align: justify;
+    width: 80%;
+  }
+`;
