@@ -7,7 +7,7 @@ const Aboutpage = () => {
     <>
       <AboutHero />
       <Story />
-      <Approach/>
+      <Approach />
     </>
   );
 };

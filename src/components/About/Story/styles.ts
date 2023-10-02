@@ -51,14 +51,14 @@ export const StyledImg = styled.div`
   height: 40em;
   overflow: hidden;
 
-  img{
+  img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
   }
 
-  canvas{
+  canvas {
     height: 100% !important;
     width: 100% !important;
   }

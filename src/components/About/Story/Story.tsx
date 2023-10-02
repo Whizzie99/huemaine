@@ -1,7 +1,7 @@
-'use client';
+"use client";
 import { useEffect, useRef } from "react";
 // import Image from "next/image";
-import hoverEffect from 'hover-effect'
+import hoverEffect from "hover-effect";
 import Container from "@/components/shared/Container/Container";
 import {
   StyledWrapper,
@@ -14,24 +14,23 @@ import {
 
 import img1 from "../../../../public/images/huemain-story.jpg";
 import img2 from "../../../../public/images/tree-of-life-2.jpeg";
-import distortImg from '../../../../public/images/myDistorsionImage.webp'
+import distortImg from "../../../../public/images/myDistorsionImage.webp";
 
 const Story = () => {
-
   const divRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const div: any = divRef.current;
-    const elemParent = document.querySelector('.distort-img');
+    const elemParent = document.querySelector(".distort-img");
 
     new hoverEffect({
-          parent: elemParent,
-          intensity: 0.2,
-          image1: img1.src,
-          image2: img2.src,
-          displacementImage: distortImg.src,
-        });
-  }, [])
+      parent: elemParent,
+      intensity: 0.2,
+      image1: img1.src,
+      image2: img2.src,
+      displacementImage: distortImg.src,
+    });
+  }, []);
 
   return (
     <StyledWrapper>
@@ -53,8 +52,7 @@ const Story = () => {
             </StyledContent>
           </StyledLeftSection>
           <StyledRightSection>
-            <StyledImg className="distort-img">
-            </StyledImg>
+            <StyledImg className="distort-img"></StyledImg>
           </StyledRightSection>
         </StyledSection>
       </Container>

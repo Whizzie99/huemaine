@@ -1,1 +1,1 @@
-declare module 'hover-effect'
+declare module "hover-effect";
