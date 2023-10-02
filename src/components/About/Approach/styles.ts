@@ -45,7 +45,7 @@ export const StyledDiveDeeper = styled.div`
   margin-top: 8em;
   width: 80%;
 
-  h2{
+  h2 {
     text-align: center;
     color: var(--white);
     font-family: var(--font-bodoni);
@@ -55,7 +55,7 @@ export const StyledDiveDeeper = styled.div`
     line-height: 1.2;
   }
 
-  p{
+  p {
     margin: 1em auto;
     font-family: var(--font-alegreya);
     color: var(--white);
