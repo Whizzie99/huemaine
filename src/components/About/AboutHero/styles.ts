@@ -30,7 +30,7 @@ export const StyledContent = styled.div`
   display: flex;
   align-items: center;
 
-  h1{
+  h1 {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -41,22 +41,21 @@ export const StyledContent = styled.div`
     line-height: 1;
     z-index: 2;
 
-    span{
+    span {
       font-size: 3.3em;
       font-weight: 900;
       color: var(--black-1);
       text-transform: capitalize;
 
-      &:nth-child(1){
+      &:nth-child(1) {
         margin-left: -2em;
       }
 
-      &:nth-child(2){
+      &:nth-child(2) {
         margin-left: -1em;
       }
     }
   }
-
 `;
 
 export const StyledImg1 = styled.div`
@@ -67,7 +66,7 @@ export const StyledImg1 = styled.div`
   height: 35em;
   z-index: 1;
 
-  img{
+  img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -84,7 +83,7 @@ export const StyledImg2 = styled.div`
   /* z-index: 3; */
   transform: rotate(49.825deg);
 
-  img{
+  img {
     height: 100%;
     width: 100%;
     object-fit: cover;
