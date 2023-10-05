@@ -23,10 +23,10 @@ const Navbar: React.FC = () => {
           </StyledLogo>
           <StyledNavItems>
             <li>
-              <Link href="#">home</Link>
+              <Link href="/">home</Link>
             </li>
             <li>
-              <Link href="#">about</Link>
+              <Link href="/about">about</Link>
             </li>
             <li>
               <Link href="#">projects</Link>

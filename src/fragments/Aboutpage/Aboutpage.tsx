@@ -1,7 +1,8 @@
-import AboutHero from "@/components/About/AboutHero/AboutHero";
-import Story from "@/components/About/Story/Story";
-import Approach from "@/components/About/Approach/Approach";
-import MeetTheFounder from "@/components/About/MeetTheFounder/MeetTheFounder";
+import AboutHero from "@/components/about/AboutHero/AboutHero";
+import Story from "@/components/about/Story/Story";
+import Approach from "@/components/about/Approach/Approach";
+import MeetTheFounder from "@/components/about/MeetTheFounder/MeetTheFounder";
+import RecentRamblings from "@/components/shared/RecentRamblings/RecentRamblings";
 
 const Aboutpage = () => {
   return (
@@ -10,6 +11,7 @@ const Aboutpage = () => {
       <Story />
       <Approach />
       <MeetTheFounder />
+      <RecentRamblings />
     </>
   );
 };

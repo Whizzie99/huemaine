@@ -35,8 +35,8 @@ export const StyledImg = styled.div`
     z-index: 2;
   }
 
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     bottom: -1.5%;
     left: -2%;
@@ -45,8 +45,8 @@ export const StyledImg = styled.div`
     background: var(--black-3);
   }
 
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
     top: -1.5%;
     right: -2%;
@@ -59,7 +59,7 @@ export const StyledImg = styled.div`
 
 export const StyledDiv = styled.div`
   margin-top: 1em;
-  h3{
+  h3 {
     color: var(--black-1);
     font-size: 1.9em;
     text-transform: capitalize;
@@ -68,7 +68,7 @@ export const StyledDiv = styled.div`
     line-height: 1.2;
   }
 
-  p{
+  p {
     color: var(--black-1);
     font-family: var(--font-alegreya);
     margin-top: 1em;
