@@ -5,7 +5,7 @@ const ServicesPage = () => {
   return (
     <>
       <ServicesHero />
-      <ServiceList/>
+      <ServiceList />
     </>
   );
 };

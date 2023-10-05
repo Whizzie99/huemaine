@@ -8,18 +8,25 @@ const ServiceList = () => {
     <StyledWrapper>
       <Container>
         <StyledShortTxt>
-          orem ipsum dolor sit amet consectetur. Pellentesque donec sagittis pharetra luctus id faucibus viverra. Aliquam orci ac odio egestas arcu tristique sed facilisis vulputate. Leo mattis dignissim viverra purus enim ultricies duis blandit.
+          orem ipsum dolor sit amet consectetur. Pellentesque donec sagittis
+          pharetra luctus id faucibus viverra. Aliquam orci ac odio egestas arcu
+          tristique sed facilisis vulputate. Leo mattis dignissim viverra purus
+          enim ultricies duis blandit.
         </StyledShortTxt>
         <StyledServicesGrid>
-          {
-            services.map(service => (
-              <ServiceCard key={service.id} title={service.title} description={service.description} serviceItems={service.serviceItems}  />
-            ))
-          }
+          {services.map((service) => (
+            <ServiceCard
+              key={service.id}
+              title={service.title}
+              description={service.description}
+              serviceItems={service.serviceItems}
+              img={service.img}
+            />
+          ))}
         </StyledServicesGrid>
       </Container>
     </StyledWrapper>
   );
-}
+};
 
 export default ServiceList;

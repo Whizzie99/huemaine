@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import styled from "styled-components";
 
 export const StyledCard = styled.div`
@@ -7,17 +7,17 @@ export const StyledCard = styled.div`
   padding: 2em 1.2em;
   border-top: 0.01em solid var(--black-1);
 
-  &:nth-child(even){
-    .service-card-left{
+  &:nth-child(even) {
+    .service-card-left {
       order: 2;
     }
 
-    .service-card-right{
+    .service-card-right {
       order: 1;
     }
   }
 
-  &:last-child{
+  &:last-child {
     border-bottom: 0.01em solid var(--black-1);
   }
 `;
@@ -25,28 +25,29 @@ export const StyledCard = styled.div`
 export const StyledCardLeft = styled.div`
   width: 50%;
 
-  h3{
+  h3 {
     text-transform: capitalize;
     font-family: var(--font-bodoni);
     font-weight: 800;
     font-size: 2em;
   }
 
-  p{
+  p {
     font-family: var(--font-alegreya);
     font-weight: 300;
     font-size: 1.1em;
     line-height: 1.5;
   }
 
-  ul{
+  ul {
     list-style: none;
     margin-top: 1em;
 
-    li{
+    li {
       font-family: var(--font-alegreya);
-      font-weight: 300;
+      font-weight: 500;
       margin: 0.6em 0;
+      text-transform: capitalize;
     }
   }
 `;
@@ -60,7 +61,7 @@ export const StyledImg = styled.div`
   height: 20em;
   width: 100%;
 
-  img{
+  img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -68,8 +69,8 @@ export const StyledImg = styled.div`
     z-index: 1;
   }
 
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
     top: 1em;
     left: -1em;
