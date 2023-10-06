@@ -12,8 +12,6 @@ const BreadCrumb = () => {
   const pathname = usePathname();
 
   const pathSections = pathname.split("/").filter(Boolean);
-  // const pathSections2 = pathname.split("/").filter(Boolean);
-  console.log(pathSections);
 
   const items = pathSections.map((section, index) => {
     const href = `/${pathSections.slice(0, index + 1).join("/")}`;
@@ -25,7 +23,6 @@ const BreadCrumb = () => {
   });
 
   return (
-    // <div>hello</div>
     <StyledBreadcrumbNav aria-label="breadcrumb">
       <StyledBreadcrumbOl>
         {items.map((item, index) => (
