@@ -7,16 +7,16 @@ const BlogList = () => {
     <StyledWrapper>
       <Container>
         <StyledList>
-          <BlogCard/>
-          <BlogCard/>
-          <BlogCard/>
-          <BlogCard/>
-          <BlogCard/>
-          <BlogCard/>
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
         </StyledList>
       </Container>
     </StyledWrapper>
   );
-}
- 
+};
+
 export default BlogList;

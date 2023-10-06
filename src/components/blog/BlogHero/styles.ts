@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import styled from "styled-components";
 
 export const StyledHero = styled.div`
@@ -17,7 +17,7 @@ export const StyledHero = styled.div`
   background-size: cover;
   width: 100%;
 
-  > h2{
+  > h2 {
     font-family: var(--font-bodoni);
     text-transform: capitalize;
     color: var(--white);
@@ -26,7 +26,7 @@ export const StyledHero = styled.div`
     text-align: center;
   }
 
-  > p{
+  > p {
     font-family: var(--font-alegreya);
     width: 50%;
     margin: 0.5em auto;
@@ -36,5 +36,3 @@ export const StyledHero = styled.div`
     color: var(--white);
   }
 `;
-
-

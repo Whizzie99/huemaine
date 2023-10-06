@@ -15,13 +15,10 @@ const BlogCard = () => {
           priority
         />
       </StyledImg>
-      <StyledDate>
-        oct 1st, 2023
-      </StyledDate>
+      <StyledDate>oct 1st, 2023</StyledDate>
       <StyledTitle>
         Lorem ipsum dolor, sit amet consectetur adipisicing.
       </StyledTitle>
-      
     </StyledCard>
   );
 };

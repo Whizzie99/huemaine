@@ -4,10 +4,10 @@ import BlogList from "@/components/blog/BlogList/BlogList";
 const BlogPage = () => {
   return (
     <>
-      <BlogHero/>
-      <BlogList/>
+      <BlogHero />
+      <BlogList />
     </>
   );
-}
- 
+};
+
 export default BlogPage;

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
@@ -10,4 +10,4 @@ export const StyledList = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
   row-gap: 2em;
-`
+`;
