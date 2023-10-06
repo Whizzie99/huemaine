@@ -21,5 +21,15 @@ export const StyledTitle = styled.h3`
   text-transform: capitalize;
   font-weight: 500;
   font-size: 1.3em;
+  /* margin-top: 1em; */
+`;
+
+export const StyledDate = styled.div`
+  font-family: var(--font-alegreya);
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 1.2em;
   margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 300;
 `;

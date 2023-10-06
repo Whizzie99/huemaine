@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
               <Link href="#">projects</Link>
             </li>
             <li>
-              <Link href="#">blog</Link>
+              <Link href="/blog">blog</Link>
             </li>
             <li>
               <Link href="#">contact</Link>

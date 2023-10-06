@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { StyledCard, StyledImg, StyledTitle } from "./styles";
+import { StyledCard, StyledImg, StyledTitle, StyledDate } from "./styles";
 
 import sample from "../../../../public/images/stun-pose-1.jpeg";
 
@@ -15,9 +15,13 @@ const BlogCard = () => {
           priority
         />
       </StyledImg>
+      <StyledDate>
+        oct 1st, 2023
+      </StyledDate>
       <StyledTitle>
         Lorem ipsum dolor, sit amet consectetur adipisicing.
       </StyledTitle>
+      
     </StyledCard>
   );
 };
