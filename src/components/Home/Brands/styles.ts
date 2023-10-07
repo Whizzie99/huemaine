@@ -64,10 +64,16 @@ export const StyledCarouselItem = styled.div`
     text-align: center;
     margin-top: 1em;
     font-family: var(--font-oswald);
-    font-size: 1.8em;
+    font-size: 1.5em;
     text-transform: capitalize;
     font-weight: 500;
     letter-spacing: 0.219em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    h3{
+      font-size: 1.8em;
+    }
   }
 `;
 
