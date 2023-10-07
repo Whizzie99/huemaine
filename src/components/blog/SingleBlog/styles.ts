@@ -50,12 +50,11 @@ export const StyledDate = styled.div`
   margin-top: 2em;
   text-align: center;
   font-family: var(--font-bodoni);
-    text-transform: capitalize;
-    font-size: 1.5em;
-    font-weight: 500;
+  text-transform: capitalize;
+  font-size: 1.5em;
+  font-weight: 500;
 
   p {
-    
   }
 `;
 
@@ -67,7 +66,7 @@ export const StyledContent = styled.div`
   font-size: 1.1em;
   font-weight: 300;
 
-  img{
+  img {
     position: static;
     width: 80%;
     height: 30em;

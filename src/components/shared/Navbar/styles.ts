@@ -2,6 +2,7 @@
 import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +23,7 @@ export const StyledLogo = styled.div`
   height: 5em;
   background: transparent;
 
-  img{
+  img {
     mix-blend-mode: difference;
   }
 `;
@@ -42,14 +43,14 @@ export const StyledNavItems = styled.ul`
       text-transform: capitalize;
       font-size: 1.1em;
       font-family: var(--font-alegreya);
-      color: var(--white);
+      color: var(--black-1);
       font-weight: 400;
     }
 
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3) {
-      a{
+      a {
         /* filter: invert(100%); */
         mix-blend-mode: color-burn;
       }
