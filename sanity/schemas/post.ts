@@ -46,5 +46,10 @@ export default {
       type: 'string',
       title: 'Author',
     },
+    {
+      name: 'date',
+      type: 'date',
+      title: 'Date',
+    },
   ],
 }

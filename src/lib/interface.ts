@@ -5,3 +5,14 @@ export interface Project {
   url: string;
   _id: string;
 }
+
+export interface Post {
+  title: string;
+  image: string;
+  content: any;
+  _id: string;
+  slug: {
+    current: string;
+  };
+  _createdAt: Date;
+}

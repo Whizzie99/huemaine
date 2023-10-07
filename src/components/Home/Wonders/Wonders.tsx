@@ -7,7 +7,7 @@ import { StyledWrapper, StyledSection, StyledProjectsGrid } from "./styles";
 async function getData() {
   const query = `*[_type == "project"]`;
 
-  const data = await client.fetch(query);
+  const data = await client.fetch(query, { next: { revalidate: 50 } });
 
   return data;
 }

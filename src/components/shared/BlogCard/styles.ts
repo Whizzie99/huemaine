@@ -1,7 +1,9 @@
 "use client";
 import styled from "styled-components";
 
-export const StyledCard = styled.div``;
+export const StyledCard = styled.div`
+  cursor: pointer;
+`;
 
 export const StyledImg = styled.div`
   position: relative;
