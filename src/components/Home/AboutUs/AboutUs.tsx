@@ -57,7 +57,7 @@ const AboutUs = () => {
       <Container>
         <StyledContent>
           <h1>
-            <span>crafting connectivity</span>
+            <span>crafting connectivity,</span>
             <span>painting possibilities</span>
           </h1>
           <p>

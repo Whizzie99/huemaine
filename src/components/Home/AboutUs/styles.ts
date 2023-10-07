@@ -2,8 +2,12 @@
 import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
-  padding: 8em 0;
+  padding: 5em 0;
   padding-bottom: 3em;
+
+  @media screen and (min-width: 1200px) {
+    padding: 8em 0;
+  }
 `;
 
 export const StyledContent = styled.div`
@@ -12,7 +16,7 @@ export const StyledContent = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 3.5em;
+    font-size: 2em;
     text-transform: capitalize;
     font-family: var(--font-bodoni);
     font-weight: 800;
@@ -22,7 +26,7 @@ export const StyledContent = styled.div`
     letter-spacing: 0.065em;
 
     span:nth-child(2) {
-      margin-left: 3.3em;
+      margin-left: 0;
     }
   }
 
@@ -33,7 +37,7 @@ export const StyledContent = styled.div`
     font-family: var(--font-alegreya);
     line-height: 1.8;
     font-weight: 300;
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   a {
@@ -41,7 +45,7 @@ export const StyledContent = styled.div`
     justify-content: center;
     align-items: center;
     gap: 0.5em;
-    width: 15%;
+    width: 60%;
     background: transparent;
     color: var(--black-1);
     border: 0.01em solid var(--black-1);
@@ -68,6 +72,24 @@ export const StyledContent = styled.div`
       color: var(--white);
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    h1{
+      font-size: 3.5em;
+
+      span:nth-child(2){
+        margin-left: 3.3em;
+      }
+
+      p{
+        font-size: 1.1em;
+      }
+
+      a{
+        width: 15%;
+      }
+    }
+  }
 `;
 
 export const StyledTrustedBrands = styled.div`
@@ -78,6 +100,10 @@ export const StyledTrustedBrands = styled.div`
     text-align: center;
     text-transform: capitalize;
     font-family: var(--font-bodoni);
+    font-size: 1.3em;
+  }
+
+  @media screen and (min-width: 1200px) {
     font-size: 2em;
   }
 `;
