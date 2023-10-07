@@ -1,4 +1,8 @@
+"use client";
+import React from "react";
 import Image from "next/image";
+import Moment from "react-moment";
+import { urlFor } from "@/lib/sanityImageUrl";
 import Container from "@/components/shared/Container/Container";
 import {
   StyledWrapper,
@@ -11,46 +15,55 @@ import {
 } from "./styles";
 import BreadCrumb from "@/components/shared/BreadCrumb/BreadCrumb";
 
-import sample from "../../../../public/images/lifestyle.jpeg";
+// import sample from "../../../../public/images/lifestyle.jpeg";
+import { PortableText } from "@portabletext/react";
 
-const SingleBlog = () => {
+interface Props {
+  title: string;
+  img?: any;
+  date: Date;
+  content: any;
+  author: string;
+}
+
+const SingleBlog: React.FC<Props> = ({ title, img, date, content, author }) => {
+  const PortableTextComponent = {
+    types: {
+      image: ({ value }: { value: any }) => (
+        <Image
+          src={urlFor(value).url()}
+          alt="Image"
+          className="rounded-lg"
+          width={800}
+          height={800}
+        />
+      ),
+    },
+  };
+
   return (
     <StyledWrapper>
       <Container>
         <StyledSection>
           <BreadCrumb />
-          <StyledTitle>Lorem ipsum dolor sit amet consectetur.</StyledTitle>
+          <StyledTitle>{title}</StyledTitle>
           <StyledContentImg>
             <Image
-              src={sample}
-              alt="Topographic"
+              src={urlFor(img).url()}
+              alt={title}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
               priority
             />
           </StyledContentImg>
           <StyledDate>
-            <p>oct 1st, 2023</p>
+            <Moment format="MMM Do YYYY">{date}</Moment>
           </StyledDate>
           <StyledContent>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates a recusandae consequuntur molestiae dicta. Blanditiis
-              quaerat, harum architecto repudiandae eaque odit inventore quidem
-              necessitatibus distinctio dolorum nobis est porro temporibus.
-              Nesciunt totam accusamus tempore harum voluptatibus quibusdam
-              corporis iure ad. Ducimus aut iure nam repellat ipsa. Doloribus
-              perspiciatis temporibus quos possimus, saepe distinctio.
-              Perspiciatis eligendi excepturi illo, ad laudantium sapiente ipsa
-              adipisci recusandae corrupti nisi aliquid. Animi rem aliquid quod
-              impedit a adipisci sed nesciunt, dolore quasi iste suscipit
-              aperiam modi ut cum porro architecto inventore esse, rerum ullam
-              deserunt perspiciatis incidunt sequi veniam. Eius non dolorem
-              placeat amet est.
-            </p>
+            <PortableText value={content} components={PortableTextComponent} />
             <StyledAuthor>
               <span>posted by</span>
-              <p>chisom njoku</p>
+              <p>{author}</p>
             </StyledAuthor>
           </StyledContent>
         </StyledSection>

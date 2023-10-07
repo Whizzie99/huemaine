@@ -46,6 +46,7 @@ export const StyledTitle = styled.div`
 
   h3 {
     position: relative;
+    text-transform: capitalize;
     margin-top: 1.3em;
     font-size: 3.5em;
     font-weight: 900;

@@ -7,7 +7,7 @@ import { StyledWrapper, StyledList } from "./styles";
 async function getData() {
   const query = `*[_type == "project"]`;
 
-  const data = await client.fetch(query, { next: { revalidate: 50 } });
+  const data = await client.fetch(query, { next: { revalidate: 0 } });
 
   return data;
 }

@@ -19,9 +19,9 @@ export const StyledImg = styled.div`
 `;
 
 export const StyledTitle = styled.h3`
-  font-family: var(--font-alegreya);
+  font-family: var(--font-bodoni);
   text-transform: capitalize;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.3em;
   /* margin-top: 1em; */
 `;
@@ -32,6 +32,6 @@ export const StyledDate = styled.div`
   font-weight: 300;
   font-size: 1.2em;
   margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
   font-weight: 300;
 `;

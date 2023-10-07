@@ -15,4 +15,5 @@ export interface Post {
     current: string;
   };
   _createdAt: Date;
+  author: string;
 }

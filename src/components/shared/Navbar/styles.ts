@@ -20,6 +20,11 @@ export const StyledLogo = styled.div`
   position: relative;
   flex: 0.2;
   height: 5em;
+  background: transparent;
+
+  img{
+    mix-blend-mode: difference;
+  }
 `;
 
 export const StyledNavItems = styled.ul`
@@ -29,6 +34,7 @@ export const StyledNavItems = styled.ul`
   align-items: center;
   list-style: none;
   gap: 2em;
+  background: transparent;
 
   li {
     a {
@@ -43,8 +49,10 @@ export const StyledNavItems = styled.ul`
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3) {
-      filter: invert(100%);
-      mix-blend-mode: difference;
+      a{
+        /* filter: invert(100%); */
+        mix-blend-mode: color-burn;
+      }
     }
   }
 `;

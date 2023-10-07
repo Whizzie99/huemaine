@@ -16,6 +16,7 @@ export const StyledTitle = styled.h2`
   color: var(--black-1);
   text-align: center;
   margin-top: 1em;
+  text-transform: capitalize;
 `;
 
 export const StyledContentImg = styled.div`
@@ -46,14 +47,15 @@ export const StyledContentImg = styled.div`
 
 export const StyledDate = styled.div`
   margin: 1em 0;
-  margin-top: 4em;
+  margin-top: 2em;
   text-align: center;
-
-  p {
-    font-family: var(--font-alegreya);
+  font-family: var(--font-bodoni);
     text-transform: capitalize;
     font-size: 1.5em;
     font-weight: 500;
+
+  p {
+    
   }
 `;
 
@@ -64,6 +66,14 @@ export const StyledContent = styled.div`
   line-height: 2;
   font-size: 1.1em;
   font-weight: 300;
+
+  img{
+    position: static;
+    width: 80%;
+    height: 30em;
+    object-fit: cover;
+    object-position: center;
+  }
 `;
 
 export const StyledAuthor = styled.div`

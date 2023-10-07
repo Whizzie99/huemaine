@@ -22,15 +22,15 @@ export default async function BlogList() {
         <Suspense fallback={<p>loading...</p>}>
           <StyledList>
             {data.map((post) => (
-                <BlogCard
-                  key={post._id}
-                  title={post.title}
-                  date={post._createdAt}
-                  img={post.image}
-                  slug={post.slug.current}
-                  id={post._id}
-                />
-              ))}
+              <BlogCard
+                key={post._id}
+                title={post.title}
+                date={post._createdAt}
+                img={post.image}
+                slug={post.slug.current}
+                id={post._id}
+              />
+            ))}
           </StyledList>
         </Suspense>
       </Container>
