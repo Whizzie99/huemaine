@@ -76,11 +76,11 @@ export const StyledTitle = styled.div`
     position: absolute;
     top: 6em;
     left: 0;
-    h4{
+    h4 {
       font-size: 1em;
     }
 
-    h3{
+    h3 {
       font-size: 3.5em;
       width: 55%;
       margin-top: 1.3em;

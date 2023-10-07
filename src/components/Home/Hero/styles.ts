@@ -73,7 +73,7 @@ export const StyledContent = styled.div`
     text-decoration: none;
     color: var(--black-1);
     gap: 0.5em;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     font-size: 0.9em;
 
     & span {
@@ -81,7 +81,6 @@ export const StyledContent = styled.div`
         font-family: var(--font-alegreya);
         font-weight: 300;
         text-transform: capitalize;
-
       }
 
       &:last-child {
@@ -89,7 +88,7 @@ export const StyledContent = styled.div`
       }
     }
 
-    &:hover{
+    &:hover {
       color: var(--white);
       background: var(--black-1);
     }
@@ -105,7 +104,7 @@ export const StyledContent = styled.div`
       width: 70%;
     }
 
-    > a{
+    > a {
       width: 35%;
       font-size: 1em;
     }

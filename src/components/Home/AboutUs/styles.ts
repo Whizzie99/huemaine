@@ -74,21 +74,21 @@ export const StyledContent = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    h1{
+    h1 {
       font-size: 3.5em;
 
-      span:nth-child(2){
+      span:nth-child(2) {
         margin-left: 3.3em;
       }
     }
 
-    p{
-        font-size: 1.1em;
-      }
+    p {
+      font-size: 1.1em;
+    }
 
-      a{
-        width: 15%;
-      }
+    a {
+      width: 15%;
+    }
   }
 `;
 
@@ -104,7 +104,7 @@ export const StyledTrustedBrands = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    h3{
+    h3 {
       font-size: 2em;
     }
   }

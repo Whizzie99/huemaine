@@ -15,25 +15,39 @@ export const StyledWrapper = styled.div`
 
   > h2 {
     color: var(--white);
-    font-size: 3.2em;
+    font-size: 2.2em;
+    text-align: center;
     text-transform: capitalize;
     font-weight: 900;
     font-family: var(--font-bodoni);
     line-height: 1.2;
-    margin-left: 10%;
+    /* margin-left: 10%; */
   }
 
   > p {
-    width: 40%;
+    width: 90%;
     color: var(--white);
     font-family: var(--font-alegreya);
     margin-top: 1em;
     font-size: 1.1em;
     font-weight: 300;
-    margin-left: 10%;
+    margin-left: 6%;
 
     &::first-letter {
       text-transform: uppercase;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    > h2 {
+      font-size: 3.2em;
+      text-align: left;
+      margin-left: 10%;
+    }
+
+    > p {
+      width: 40%;
+      margin-left: 10%;
     }
   }
 `;

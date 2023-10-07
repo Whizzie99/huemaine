@@ -43,11 +43,11 @@ export const StyledSection = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    > h2{
+    > h2 {
       font-size: 3.2em;
     }
 
-    >p{
+    > p {
       width: 40%;
       font-size: 1.1em;
     }
@@ -62,7 +62,6 @@ export const StyledServices = styled.div`
   margin: 0 auto;
   margin-top: 3em;
 
-
   @media screen and (min-width: 1200px) {
     width: auto;
     grid-template-columns: repeat(2, 1fr);
@@ -74,7 +73,6 @@ export const StyledService = styled.div`
   flex-direction: column;
   border-top: 0.01em solid var(--white);
   padding: 1em 0;
-  
 
   > h3 {
     flex: 0.3;
@@ -94,15 +92,15 @@ export const StyledService = styled.div`
     line-height: 1.5;
   }
 
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: 1200px) {
     flex-direction: row;
 
-    > h3{
+    > h3 {
       flex: 0.3;
       font-size: 1.7em;
     }
 
-    > p{
+    > p {
       flex: 0.7;
       font-size: 1.01em;
     }
@@ -148,7 +146,7 @@ export const StyledExploreBtn = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    a{
+    a {
       width: 15%;
     }
   }
