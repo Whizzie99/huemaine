@@ -80,15 +80,15 @@ export const StyledContent = styled.div`
       span:nth-child(2){
         margin-left: 3.3em;
       }
+    }
 
-      p{
+    p{
         font-size: 1.1em;
       }
 
       a{
         width: 15%;
       }
-    }
   }
 `;
 
@@ -104,7 +104,9 @@ export const StyledTrustedBrands = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 2em;
+    h3{
+      font-size: 2em;
+    }
   }
 `;
 
