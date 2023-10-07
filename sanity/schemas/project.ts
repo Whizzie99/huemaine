@@ -11,7 +11,7 @@ export default {
     {
       name: 'subtitle',
       type: 'string',
-      title: 'Subtitle'
+      title: 'Subtitle',
     },
     {
       name: 'image',
@@ -22,6 +22,6 @@ export default {
       name: 'url',
       type: 'url',
       title: 'url',
-    }
-  ]
+    },
+  ],
 }

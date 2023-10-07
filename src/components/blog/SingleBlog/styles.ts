@@ -33,8 +33,8 @@ export const StyledContentImg = styled.div`
     z-index: 2;
   }
 
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
     top: 1.5em;
     left: -1.5em;
@@ -49,7 +49,7 @@ export const StyledDate = styled.div`
   margin-top: 4em;
   text-align: center;
 
-  p{
+  p {
     font-family: var(--font-alegreya);
     text-transform: capitalize;
     font-size: 1.5em;
@@ -70,11 +70,11 @@ export const StyledAuthor = styled.div`
   text-transform: capitalize;
   margin-top: 1.2em;
 
-  span{
+  span {
     font-style: italic;
   }
 
-  p{
+  p {
     margin: 0;
     font-weight: 500;
   }

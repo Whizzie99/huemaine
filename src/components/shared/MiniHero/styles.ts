@@ -1,7 +1,6 @@
 "use client";
 import styled from "styled-components";
 
-
 interface StyledHeroProps {
   readonly $bgImg?: string;
 }
@@ -12,12 +11,15 @@ export const StyledHero = styled.div<StyledHeroProps>`
   justify-content: center;
   align-items: center;
   height: 60vh;
-  background-image: ${props => props.$bgImg? `linear-gradient(
+  background-image: ${(props) =>
+    props.$bgImg
+      ? `linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url(${props.$bgImg})`: `linear-gradient(
+    url(${props.$bgImg})`
+      : `linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)

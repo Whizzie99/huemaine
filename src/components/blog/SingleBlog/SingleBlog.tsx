@@ -53,7 +53,6 @@ const SingleBlog = () => {
               <p>chisom njoku</p>
             </StyledAuthor>
           </StyledContent>
-          
         </StyledSection>
       </Container>
     </StyledWrapper>
