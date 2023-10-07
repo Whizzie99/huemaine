@@ -9,7 +9,7 @@ import {
   StyledImg2,
 } from "./styles";
 
-import img1 from "../../../../public/images/lifestyle.jpeg";
+import img1 from "../../../../public/images/vogue.jpeg";
 import img2 from "../../../../public/images/porsche.jpeg";
 
 const Hero: React.FC = () => {

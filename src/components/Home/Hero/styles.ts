@@ -24,6 +24,7 @@ export const StyledHeroRight = styled.div`
 export const StyledContent = styled.div`
   width: 80%;
   margin-left: 10%;
+  background: transparent;
 
   h1 {
     position: relative;
