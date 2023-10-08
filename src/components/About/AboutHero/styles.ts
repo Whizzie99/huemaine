@@ -48,7 +48,7 @@ export const StyledContent = styled.div`
     z-index: 2;
 
     span {
-      font-size: 1.9em;
+      font-size: 1.7em;
       font-weight: 900;
       color: var(--black-1);
       text-transform: capitalize;
@@ -113,7 +113,7 @@ export const StyledImg1 = styled.div`
 export const StyledImg2 = styled.div`
   position: absolute;
   top: 0;
-  right:19%;
+  right:15%;
   width: 15em;
   height: 15em;
   /* z-index: 3; */
