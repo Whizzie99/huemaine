@@ -1,5 +1,7 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
+import { PiArrowRightLight } from "react-icons/pi";
 import {
   StyledHero,
   StyledHeroLeft,
@@ -23,6 +25,12 @@ const Hero: React.FC = () => {
             sapien varius morbi habitasse. Nisi feugiat convallis sed pretium
             nulla massa non ut.
           </p>
+          <Link href="#">
+            <span>schedule a consult</span>
+            <span>
+              <PiArrowRightLight />
+            </span>
+          </Link>
         </StyledContent>
       </StyledHeroLeft>
       <StyledHeroRight>

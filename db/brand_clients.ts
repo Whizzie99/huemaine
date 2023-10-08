@@ -8,6 +8,7 @@ import jumia from "../public/images/clients/brands/jumia-logo.png";
 import kiitec from "../public/images/clients/brands/kiitec-logo.png";
 import ori from "../public/images/clients/brands/ori-logo.png";
 import repdoor from "../public/images/clients/brands/repdoor-logo.png";
+import forbes from "../public/images/clients/brands/forbes.png";
 
 interface Brand {
   id: number;
@@ -64,6 +65,11 @@ export const brands: Brand[] = [
   {
     id: 10,
     img: repdoor.src,
+    text: "repdoor logo",
+  },
+  {
+    id: 11,
+    img: forbes.src,
     text: "repdoor logo",
   },
 ];

@@ -1,7 +1,6 @@
 "use client";
 import styled from "styled-components";
 
-
 interface StyledHeroProps {
   readonly $bgImg?: string;
 }
@@ -12,12 +11,15 @@ export const StyledHero = styled.div<StyledHeroProps>`
   justify-content: center;
   align-items: center;
   height: 60vh;
-  background-image: ${props => props.$bgImg? `linear-gradient(
+  background-image: ${(props) =>
+    props.$bgImg
+      ? `linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url(${props.$bgImg})`: `linear-gradient(
+    url(${props.$bgImg})`
+      : `linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
@@ -31,18 +33,29 @@ export const StyledHero = styled.div<StyledHeroProps>`
     font-family: var(--font-bodoni);
     text-transform: capitalize;
     color: var(--white);
-    font-size: 3em;
+    font-size: 2.3em;
     font-weight: 900;
     text-align: center;
   }
 
   > p {
     font-family: var(--font-alegreya);
-    width: 50%;
+    width: 80%;
     margin: 0.5em auto;
     text-align: center;
     font-weight: 300;
-    font-size: 1.35em;
+    font-size: 1.1em;
     color: var(--white);
+  }
+
+  @media screen and (min-width: 1200px) {
+    > h2 {
+      font-size: 3em;
+    }
+
+    > p {
+      font-size: 1.35em;
+      width: 50%;
+    }
   }
 `;

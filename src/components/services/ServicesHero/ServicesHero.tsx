@@ -25,9 +25,9 @@ const ServicesHero = () => {
       </StyledTopgraphicImg>
       <StyledContent>
         <h1>
-          <span>unmasking</span>
-          <span>our</span>
-          <span>essence</span>
+          <span>worldclass</span>
+          <span>solutions</span>
+          <span>suite</span>
         </h1>
         <StyledImg1>
           <Image

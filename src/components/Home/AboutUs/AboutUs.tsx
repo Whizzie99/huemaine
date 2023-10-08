@@ -57,7 +57,7 @@ const AboutUs = () => {
       <Container>
         <StyledContent>
           <h1>
-            <span>crafting connectivity</span>
+            <span>crafting connectivity,</span>
             <span>painting possibilities</span>
           </h1>
           <p>
@@ -76,7 +76,7 @@ const AboutUs = () => {
             facilisis. Dictum lorem netus neque varius vitae at sed convallis
             mattis. Eu porttitor diam diam dui. Placerat diam tempor orci metus.
           </p>
-          <Link href="#">
+          <Link href="/about">
             <span>explore</span>
             <span>
               <PiArrowRightLight />

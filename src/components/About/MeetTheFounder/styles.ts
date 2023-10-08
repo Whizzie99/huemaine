@@ -2,29 +2,50 @@
 import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
-  padding: 8em 0;
+  padding: 5em 0;
+  padding-bottom: 2em;
+
+  @media screen and (min-width: 1200px) {
+    padding: 8em;
+    padding-bottom: 2em;
+  }
 `;
 
 export const StyledSection = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 1em;
+  }
 `;
 
 export const StyledLeftSection = styled.div`
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 100%;
+
+  @media screen and (min-width: 1200px) {
+    width: 50%;
+  }
 `;
 
 export const StyledRightSection = styled.div`
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 100%;
+
+  @media screen and (min-width: 1200px) {
+    width: 50%;
+  }
 `;
 
 export const StyledImg = styled.div`
   position: relative;
-  height: 40em;
-  width: 80%;
+  height: 30em;
+  width: 100%;
   z-index: 2;
 
   img {
@@ -55,6 +76,11 @@ export const StyledImg = styled.div`
     background: var(--black-3);
     z-index: 1;
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 80%;
+    height: 40em;
+  }
 `;
 
 export const StyledDiv = styled.div`
@@ -80,12 +106,18 @@ export const StyledDiv = styled.div`
       text-transform: uppercase;
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    h3 {
+      font-size: 1.4em;
+    }
+  }
 `;
 
 export const StyledContent = styled.div`
   > h2 {
     color: var(--black-1);
-    font-size: 3.2em;
+    font-size: 2.2em;
     text-transform: capitalize;
     font-family: var(--font-bodoni);
     font-weight: 900;
@@ -103,6 +135,16 @@ export const StyledContent = styled.div`
 
     &::first-letter {
       text-transform: uppercase;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    > h2 {
+      font-size: 3.2em;
+    }
+
+    > p {
+      font-size: 1em;
     }
   }
 `;

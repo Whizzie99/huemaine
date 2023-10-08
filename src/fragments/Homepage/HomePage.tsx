@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Hero from "@/components/home/Hero/Hero";
 import AboutUs from "@/components/home/AboutUs/AboutUs";
 import Services from "@/components/home/Services/Services";
@@ -13,7 +14,9 @@ const Homepage = () => {
       <Services />
       <Wonders />
       <Brands />
-      <RecentRamblings />
+      <Suspense fallback={<p>loading...</p>}>
+        <RecentRamblings />
+      </Suspense>
     </>
   );
 };

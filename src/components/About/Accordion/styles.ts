@@ -3,8 +3,12 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const StyledWrapper = styled.div`
-  width: 70%;
+  width: 90%;
   margin: 4em auto;
+
+  @media screen and (min-width: 1200px) {
+    width: 70%;
+  }
 `;
 
 export const StyledAccordion = styled.div`
@@ -28,12 +32,22 @@ export const StyledHeading = styled.div`
     font-family: var(--font-bodoni);
     font-weight: 700;
     color: var(--white);
-    font-size: 2.3em;
+    font-size: 1.7em;
   }
 
   span {
-    font-size: 1.8em;
+    font-size: 1.2em;
     color: var(--white);
+  }
+
+  @media screen and (min-width: 1200px) {
+    h3 {
+      font-size: 2.3em;
+    }
+
+    span {
+      font-size: 1.8em;
+    }
   }
 `;
 

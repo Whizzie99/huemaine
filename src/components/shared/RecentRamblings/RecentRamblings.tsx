@@ -1,4 +1,7 @@
+import { Suspense } from "react";
 import Link from "next/link";
+import { client } from "@/lib/sanity";
+import { Post } from "@/lib/interface";
 import { PiArrowRightLight } from "react-icons/pi";
 import Container from "../Container/Container";
 import BlogCard from "../BlogCard/BlogCard";
@@ -9,7 +12,17 @@ import {
   StyledExploreBtn,
 } from "./styles";
 
-const RecentRamblings = () => {
+async function getData() {
+  const query = `*[_type == "post"][0...3]`;
+
+  const data = await client.fetch(query, { next: { revalidate: 10 } });
+
+  return data;
+}
+
+export default async function RecentRamlings() {
+  const data = (await getData()) as Post[];
+
   return (
     <StyledWrapper>
       <Container>
@@ -24,11 +37,20 @@ const RecentRamblings = () => {
             velit et lectus ut. Est nunc facilisi sapien dictumst viverra. Amet
             fermentum donec tempor turpis. Urna mauris nam aliquam urna{" "}
           </p>
-          <StyledGrid>
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-          </StyledGrid>
+          <Suspense fallback={<p>loading...</p>}>
+            <StyledGrid>
+              {data.map((post) => (
+                <BlogCard
+                  key={post._id}
+                  title={post.title}
+                  date={post._createdAt}
+                  img={post.image}
+                  slug={post.slug.current}
+                  id={post._id}
+                />
+              ))}
+            </StyledGrid>
+          </Suspense>
           <StyledExploreBtn>
             <Link href="#">
               <span>view more</span>
@@ -41,6 +63,4 @@ const RecentRamblings = () => {
       </Container>
     </StyledWrapper>
   );
-};
-
-export default RecentRamblings;
+}

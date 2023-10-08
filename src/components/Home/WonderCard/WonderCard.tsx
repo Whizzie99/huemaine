@@ -1,15 +1,24 @@
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { urlFor } from "@/lib/sanityImageUrl";
 import { StyledCard, StyledImg, StyledTitle, StyledBtn } from "./styles";
 
-import sample from "../../../../public/images/projects/1.jpeg";
+// import sample from "../../../../public/images/projects/1.jpeg";
 
-const WonderCard = () => {
+interface Props {
+  img: any;
+  subtitle: string;
+  url: string;
+  title: string;
+}
+
+const WonderCard: React.FC<Props> = ({ title, subtitle, img, url }) => {
   return (
     <StyledCard>
       <StyledImg>
         <Image
-          src={sample}
+          src={urlFor(img).url()}
           alt="sample"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
@@ -17,11 +26,11 @@ const WonderCard = () => {
         />
       </StyledImg>
       <StyledTitle>
-        <h4>wizkid’s 4th studio album</h4>
-        <h3>Wizkid: From Lagos with love</h3>
+        <h4>{subtitle}</h4>
+        <h3>{title}</h3>
       </StyledTitle>
       <StyledBtn>
-        <Link href="#">
+        <Link href={url} target="_blank">
           <span>view the</span>
           <span>
             <svg

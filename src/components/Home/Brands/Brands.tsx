@@ -63,8 +63,8 @@ const Brands = () => {
         </StyledNavigation>
         <Swiper
           onSwiper={onSwiper}
-          slidesPerView={3.5}
-          spaceBetween={30}
+          slidesPerView={1.1}
+          spaceBetween={10}
           navigation={{
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,
@@ -75,6 +75,20 @@ const Brands = () => {
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1.1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              // spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3.5,
+              spaceBetween: 30,
+            },
           }}
         >
           {people.map((person) => (
