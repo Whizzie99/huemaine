@@ -1,7 +1,7 @@
 import { client } from "@/lib/sanity";
 import { Project } from "@/lib/interface";
 import Container from "@/components/shared/Container/Container";
-import WonderCard from "@/components/home/WonderCard/WonderCard";
+import WonderCard from "../../../components/home/WonderCard/WonderCard";
 import { StyledWrapper, StyledList } from "./styles";
 
 async function getData() {
