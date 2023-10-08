@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
-  padding: 8em 0;
+  padding: 5em 0;
   padding-bottom: 2em;
   background-image: linear-gradient(
       to bottom,
@@ -13,6 +13,11 @@ export const StyledWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media screen and (min-width: 1200px) {
+    padding: 8em 0;
+    padding-bottom: 2em;
+  }
 `;
 
 export const StyledSection = styled.div``;
@@ -24,36 +29,61 @@ export const StyledTopSection = styled.div`
 export const StyledSectionLeft = styled.div`
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 100%;
+
+  @media screen and (min-width: 1200px) {
+    width: 50%;
+  }
 `;
 
 export const StyledContent = styled.div`
   > h2 {
     color: var(--white);
-    font-size: 3.2em;
+    font-size: 2.2em;
     text-transform: capitalize;
     font-weight: 900;
     font-family: var(--font-bodoni);
     line-height: 1.2;
+    text-align: center;
   }
 
   > p {
-    width: 70%;
+    width: 100%;
     color: var(--white);
     font-family: var(--font-alegreya);
     margin-top: 1em;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 300;
+    text-align: center;
 
     &::first-letter {
       text-transform: uppercase;
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    > h2{
+      font-size: 3.2em;
+      text-align: left;
+    }
+
+    >p{
+      width: 70%;
+      font-size: 1.1em;
+      text-align: left;
+    }
+  }
 `;
 
 export const StyledSectionRight = styled.div`
+  display: none;
   position: relative;
-  width: 50%;
+  width: 100%;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    width: 50%;
+  }
 `;
 
 export const StyledImg1 = styled.div`
@@ -86,6 +116,8 @@ export const StyledImg2 = styled.div`
 
 export const StyledBtns = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 1em;
   margin-top: 2em;
 
@@ -95,7 +127,7 @@ export const StyledBtns = styled.div`
     justify-content: center;
     align-items: center;
     gap: 0.5em;
-    width: 40%;
+    width: 50%;
     background: transparent;
     color: var(--white);
     border: 0.01em solid var(--white);
@@ -127,7 +159,7 @@ export const StyledBtns = styled.div`
     justify-content: center;
     align-items: center;
     gap: 0.5em;
-    width: 40%;
+    width: 60%;
     background: transparent;
     color: var(--white);
     border: 0.01em solid var(--white);
@@ -142,7 +174,7 @@ export const StyledBtns = styled.div`
       &:first-child {
         font-family: var(--font-alegreya);
         font-weight: 300;
-        font-size: 1.1em;
+        font-size: 1.2em;
       }
 
       &:last-child {
@@ -156,13 +188,34 @@ export const StyledBtns = styled.div`
       color: var(--black-1);
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: flex-start;
+
+    a{
+      width: 40%;
+    }
+
+    button{
+      width: 40%;
+    }
+  }
 `;
 
 export const StyledBottomSection = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin-top: 2em;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-top: 4em;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
 `;
 
 export const StyledCopyright = styled.div`
@@ -170,12 +223,19 @@ export const StyledCopyright = styled.div`
   text-transform: capitalize;
   color: var(--white);
   font-weight: 300;
+  order: 2;
+
+  @media screen and (min-width: 1200px) {
+    order: 1;
+  }
 `;
 
 export const StyledSocials = styled.ul`
   list-style: none;
   display: flex;
   gap: 1em;
+  order: 1;
+  margin-bottom: 0.3em;
 
   a {
     font-family: var(--font-alegreya);
@@ -183,5 +243,10 @@ export const StyledSocials = styled.ul`
     color: var(--white);
     text-transform: capitalize;
     font-weight: 300;
+  }
+
+  @media screen and (min-width: 1200px) {
+    order: 2;
+    margin-bottom: 0;
   }
 `;
