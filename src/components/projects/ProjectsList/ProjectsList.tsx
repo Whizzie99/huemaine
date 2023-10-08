@@ -9,6 +9,8 @@ async function getData() {
 
   const data = await client.fetch(query, { next: { revalidate: 0 } });
 
+  // please work
+
   return data;
 }
 
