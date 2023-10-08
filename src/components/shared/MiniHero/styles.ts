@@ -49,11 +49,11 @@ export const StyledHero = styled.div<StyledHeroProps>`
   }
 
   @media screen and (min-width: 1200px) {
-    > h2{
+    > h2 {
       font-size: 3em;
     }
 
-    > p{
+    > p {
       font-size: 1.35em;
       width: 50%;
     }

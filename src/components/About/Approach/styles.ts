@@ -42,11 +42,11 @@ export const StyledSection = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    > h2{
+    > h2 {
       font-size: 3.2em;
     }
 
-    > p{
+    > p {
       width: 50%;
       font-size: 1.1em;
     }
@@ -83,11 +83,11 @@ export const StyledDiveDeeper = styled.div`
     margin-top: 5em;
     width: 80%;
 
-    h2{
+    h2 {
       font-size: 2.9em;
     }
 
-    p{
+    p {
       font-size: 1.1em;
       text-align: justify;
       width: 80%;

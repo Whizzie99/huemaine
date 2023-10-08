@@ -6,7 +6,7 @@ export const StyledWrapper = styled.div`
   padding-bottom: 2em;
 
   @media screen and (min-width: 1200px) {
-    padding: 8em ;
+    padding: 8em;
     padding-bottom: 2em;
   }
 `;
@@ -108,7 +108,7 @@ export const StyledDiv = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    h3{
+    h3 {
       font-size: 1.4em;
     }
   }
@@ -139,7 +139,7 @@ export const StyledContent = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    > h2{
+    > h2 {
       font-size: 3.2em;
     }
 

@@ -8,8 +8,6 @@ export const StyledCard = styled.div`
   padding: 2em 0;
   border-top: 0.01em solid var(--black-1);
 
-  
-
   &:last-child {
     border-bottom: 0.01em solid var(--black-1);
   }
@@ -30,13 +28,13 @@ export const StyledCard = styled.div`
 
     &:nth-child(even) {
       .service-card-left {
-      order: 2;
-    }
+        order: 2;
+      }
 
-    .service-card-right {
-      order: 1;
+      .service-card-right {
+        order: 1;
+      }
     }
-  }
   }
 `;
 
@@ -72,11 +70,11 @@ export const StyledCardLeft = styled.div`
   @media screen and (min-width: 1200px) {
     width: 50%;
 
-    h3{
+    h3 {
       font-size: 2em;
     }
 
-    p{
+    p {
       font-size: 1.1em;
     }
   }

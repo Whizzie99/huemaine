@@ -41,11 +41,11 @@ export const StyledHeading = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    h3{
+    h3 {
       font-size: 2.3em;
     }
 
-    span{
+    span {
       font-size: 1.8em;
     }
   }

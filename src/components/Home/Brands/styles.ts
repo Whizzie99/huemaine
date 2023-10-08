@@ -71,7 +71,7 @@ export const StyledCarouselItem = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    h3{
+    h3 {
       font-size: 1.8em;
     }
   }

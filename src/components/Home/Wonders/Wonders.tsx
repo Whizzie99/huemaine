@@ -32,16 +32,16 @@ export default async function Wonders() {
           </p>
           <Suspense fallback={<p>loading...</p>}>
             <StyledProjectsGrid>
-            {data.map((project) => (
-              <WonderCard
-                key={project._id}
-                title={project.title}
-                subtitle={project.subtitle}
-                img={project.image}
-                url={project.url}
-              />
-            ))}
-          </StyledProjectsGrid>
+              {data.map((project) => (
+                <WonderCard
+                  key={project._id}
+                  title={project.title}
+                  subtitle={project.subtitle}
+                  img={project.image}
+                  url={project.url}
+                />
+              ))}
+            </StyledProjectsGrid>
           </Suspense>
         </StyledSection>
       </Container>

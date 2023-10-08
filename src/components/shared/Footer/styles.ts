@@ -62,12 +62,12 @@ export const StyledContent = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    > h2{
+    > h2 {
       font-size: 3.2em;
       text-align: left;
     }
 
-    >p{
+    > p {
       width: 70%;
       font-size: 1.1em;
       text-align: left;
@@ -193,11 +193,11 @@ export const StyledBtns = styled.div`
     flex-direction: row;
     justify-content: flex-start;
 
-    a{
+    a {
       width: 40%;
     }
 
-    button{
+    button {
       width: 40%;
     }
   }

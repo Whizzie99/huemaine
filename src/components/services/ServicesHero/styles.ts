@@ -65,18 +65,18 @@ export const StyledContent = styled.div`
 
   @media screen and (min-width: 1200px) {
     padding: 0;
-    h1{
+    h1 {
       align-items: flex-start;
-      span{
+      span {
         font-size: 3.3em;
 
         &:nth-child(1) {
-        margin-left: -2em;
-      }
+          margin-left: -2em;
+        }
 
-      &:nth-child(2) {
-        margin-left: -1em;
-      }
+        &:nth-child(2) {
+          margin-left: -1em;
+        }
       }
     }
   }
@@ -113,7 +113,7 @@ export const StyledImg1 = styled.div`
 export const StyledImg2 = styled.div`
   position: absolute;
   top: 0;
-  right:15%;
+  right: 15%;
   width: 15em;
   height: 15em;
   /* z-index: 3; */

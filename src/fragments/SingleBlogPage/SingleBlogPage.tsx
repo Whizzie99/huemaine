@@ -12,7 +12,6 @@ async function getData(id: string) {
 
 export default async function SingleBlogPage({ id }: { id: string }) {
   const data = (await getData(id)) as Post;
-  console.log(data);
 
   return (
     <>

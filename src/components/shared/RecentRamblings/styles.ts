@@ -33,11 +33,11 @@ export const StyledSection = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    > h2{
+    > h2 {
       font-size: 3.2em;
     }
 
-    > p{
+    > p {
       width: 40%;
       font-size: 1.1em;
     }
@@ -95,7 +95,7 @@ export const StyledExploreBtn = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    a{
+    a {
       width: 15%;
     }
   }
