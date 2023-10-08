@@ -3,9 +3,11 @@ import styled from "styled-components";
 
 export const StyledWrapper = styled.div`
   padding: 5em 0;
+  padding-bottom: 2em;
 
   @media screen and (min-width: 1200px) {
     padding: 8em ;
+    padding-bottom: 2em;
   }
 `;
 
