@@ -113,9 +113,9 @@ export const StyledImg1 = styled.div`
 export const StyledImg2 = styled.div`
   position: absolute;
   top: 0;
-  right:10%;
+  right:19%;
   width: 15em;
-  height: 20em;
+  height: 15em;
   /* z-index: 3; */
   transform: rotate(49.825deg);
 
