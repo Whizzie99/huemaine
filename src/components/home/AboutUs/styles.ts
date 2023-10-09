@@ -135,7 +135,10 @@ export const StyledMarqueeItem2 = styled(StyledMarqueeItem)`
 
 export const StyledMarqueeImage = styled.div`
   position: relative;
-  width: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 12%; */
   height: 10em;
 
   img {
@@ -145,7 +148,15 @@ export const StyledMarqueeImage = styled.div`
     aspect-ratio: 2/3;
   }
 
-  &:last-child {
+  /* &:last-child {
     margin-right: 48px;
+  } */
+`;
+
+export const StyledCustomMarquee = styled.div`
+  .swiper {
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
   }
 `;

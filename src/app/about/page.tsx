@@ -1,6 +1,4 @@
-import AboutPage from "@/fragments/AboutPage/AboutPage"
+import AboutPage from "@/fragments/AboutPage/AboutPage";
 export default function About() {
-  return (
-    <AboutPage/>
-  )
+  return <AboutPage />;
 }

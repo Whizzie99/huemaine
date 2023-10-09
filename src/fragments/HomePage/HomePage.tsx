@@ -6,7 +6,7 @@ import Wonders from "@/components/home/Wonders/Wonders";
 import Brands from "@/components/home/Brands/Brands";
 import RecentRamblings from "@/components/shared/RecentRamblings/RecentRamblings";
 
-export default function HomePage () {
+export default function HomePage() {
   return (
     <>
       <Hero />

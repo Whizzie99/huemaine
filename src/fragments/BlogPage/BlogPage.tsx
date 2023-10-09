@@ -2,7 +2,7 @@
 import MiniHero from "@/components/shared/MiniHero/MiniHero";
 import BlogList from "@/components/blog/BlogList/BlogList";
 
-export default function BlogPage () {
+export default function BlogPage() {
   return (
     <>
       <MiniHero
