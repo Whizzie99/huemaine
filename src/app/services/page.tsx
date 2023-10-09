@@ -1,4 +1,4 @@
-import ServicesPage from "@/fragments/Servicespage/ServicesPage";
+import ServicesPage from "@/fragments/ServicesPage/ServicesPage";
 
 export default function Services() {
   return <ServicesPage />;

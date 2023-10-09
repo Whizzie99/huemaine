@@ -2,7 +2,7 @@
 import MiniHero from "@/components/shared/MiniHero/MiniHero";
 import BlogList from "@/components/blog/BlogList/BlogList";
 
-const BlogPage = () => {
+export default function BlogPage () {
   return (
     <>
       <MiniHero
@@ -13,6 +13,4 @@ const BlogPage = () => {
       <BlogList />
     </>
   );
-};
-
-export default BlogPage;
+}

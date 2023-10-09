@@ -4,7 +4,7 @@ import Approach from "@/components/about/Approach/Approach";
 import MeetTheFounder from "@/components/about/MeetTheFounder/MeetTheFounder";
 import RecentRamblings from "@/components/shared/RecentRamblings/RecentRamblings";
 
-const Aboutpage = () => {
+export default function AboutPage(){
   return (
     <>
       <AboutHero />
@@ -13,7 +13,5 @@ const Aboutpage = () => {
       <MeetTheFounder />
       <RecentRamblings />
     </>
-  );
-};
-
-export default Aboutpage;
+  )
+}

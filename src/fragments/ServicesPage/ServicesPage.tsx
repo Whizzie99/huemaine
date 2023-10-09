@@ -2,7 +2,7 @@ import ServicesHero from "@/components/services/ServicesHero/ServicesHero";
 import MiniHero from "@/components/shared/MiniHero/MiniHero";
 import ServiceList from "@/components/services/ServiceList/ServiceList";
 
-const ServicesPage = () => {
+export default function ServicesPage () {
   return (
     <>
       <MiniHero
@@ -12,6 +12,4 @@ const ServicesPage = () => {
       <ServiceList />
     </>
   );
-};
-
-export default ServicesPage;
+}
