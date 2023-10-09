@@ -6,7 +6,7 @@ import Wonders from "@/components/home/Wonders/Wonders";
 import Brands from "@/components/home/Brands/Brands";
 import RecentRamblings from "@/components/shared/RecentRamblings/RecentRamblings";
 
-const Homepage = () => {
+export default function HomePage () {
   return (
     <>
       <Hero />
@@ -19,6 +19,4 @@ const Homepage = () => {
       </Suspense>
     </>
   );
-};
-
-export default Homepage;
+}
