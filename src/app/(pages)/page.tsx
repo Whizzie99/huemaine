@@ -1,5 +1,4 @@
-import Homepage from "../../fragments/Homepage/HomePage";
-
+import HomePage from "@/fragments/HomePage/HomePage";
 export default function Home() {
-  return <Homepage />;
+  return <HomePage />;
 }
