@@ -139,10 +139,10 @@ export const StyledMarqueeImage = styled.div`
   justify-content: center;
   align-items: center;
   /* width: 12%; */
-  height: 10em;
+  height: 6em;
 
   img {
-    width: 100% !important;
+    width: 70% !important;
     height: 100% !important;
     object-fit: contain !important;
     aspect-ratio: 2/3;
@@ -154,6 +154,7 @@ export const StyledMarqueeImage = styled.div`
 `;
 
 export const StyledCustomMarquee = styled.div`
+  margin-top: 2em;
   .swiper {
     .swiper-wrapper {
       transition-timing-function: linear;
