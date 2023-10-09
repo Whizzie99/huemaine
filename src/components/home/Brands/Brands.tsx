@@ -49,8 +49,8 @@ const Brands = () => {
         trusted huemaine
       </h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-        commodi.
+        Visionaries who&apos;ve embraced Huemaine&apos;s brilliance, where trust
+        meets innovation in a seamless partnership.
       </p>
       <StyledCarousel>
         <StyledNavigation>

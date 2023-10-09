@@ -53,3 +53,48 @@ export const StyledProjectsGrid = styled.div`
     width: 80%;
   }
 `;
+
+export const StyledExploreBtn = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    width: 60%;
+    background: transparent;
+    color: var(--black-1);
+    border: 0.01em solid var(--black-1);
+    text-transform: capitalize;
+    margin: 1em auto;
+    text-decoration: none;
+    padding: 1em;
+    margin-top: 2em;
+    transition: all 0.3s ease;
+
+    span {
+      &:first-child {
+        font-family: var(--font-alegreya);
+        font-weight: 300;
+      }
+
+      &:last-child {
+        margin-top: 0.3em;
+      }
+    }
+
+    &:hover {
+      background: var(--black-1);
+      color: var(--white);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    a {
+      width: 15%;
+    }
+  }
+`;

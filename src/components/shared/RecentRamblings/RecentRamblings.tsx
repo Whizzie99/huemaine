@@ -33,9 +33,8 @@ export default async function RecentRamlings() {
             ramblings
           </h2>
           <p>
-            orem ipsum dolor sit amet consectetur. Nisl erat non rhoncus eget
-            velit et lectus ut. Est nunc facilisi sapien dictumst viverra. Amet
-            fermentum donec tempor turpis. Urna mauris nam aliquam urna{" "}
+            Dive into our recent ramblings, where insights and ideas collide to
+            spark new horizons in thought and action.
           </p>
           <Suspense fallback={<p>loading...</p>}>
             <StyledGrid>

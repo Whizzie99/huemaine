@@ -7,8 +7,7 @@ export default function BlogPage() {
     <>
       <MiniHero
         title="blog"
-        subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-        corporis, voluptates sint animi magnam veniam"
+        subtitle="Dive into our digital journal of ideas, insights, and inspiration, where curiosity finds its fuel."
       />
       <BlogList />
     </>

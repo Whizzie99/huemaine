@@ -21,9 +21,10 @@ const Hero: React.FC = () => {
         <StyledContent>
           <h1>Illuminating Brands with Creative Brilliance and PR Expertise</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Convallis at dis leo tortor
-            sapien varius morbi habitasse. Nisi feugiat convallis sed pretium
-            nulla massa non ut.
+            Step into the world of creative brilliance and PR expertise where
+            your brand&apo;s story comes to life. We illuminate your unique
+            narrative, casting it in a dazzling spotlight that captures hearts
+            and minds.
           </p>
           <Link href="#">
             <span>schedule a consult</span>

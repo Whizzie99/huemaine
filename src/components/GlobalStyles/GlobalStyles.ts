@@ -18,4 +18,8 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     /* border: 0.01em solid red; */
   }
+
+  body{
+    scroll-behavior: smooth;
+  }
 `;

@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
   const currentYear: number = new Date().getFullYear();
 
   return (
-    <StyledWrapper>
+    <StyledWrapper id="contact">
       <Container>
         <StyledSection>
           <StyledTopSection>
@@ -37,8 +37,8 @@ const Footer: React.FC = () => {
                   today!
                 </h2>
                 <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Mollitia, nihil
+                  Ready to embark on a journey with us? Connect with us today,
+                  and let&apos;s start crafting your unique story together!
                 </p>
                 <StyledBtns>
                   <Link href="#">

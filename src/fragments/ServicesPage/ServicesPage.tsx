@@ -7,7 +7,7 @@ export default function ServicesPage() {
     <>
       <MiniHero
         title="discover our solutions suite"
-        subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere corporis, voluptates sint animi magnam veniam"
+        subtitle="Explore a realm of tailored solutions where innovation meets expertise, ensuring your challenges meet their match."
       />
       <ServiceList />
     </>
