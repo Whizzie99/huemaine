@@ -15,7 +15,9 @@ import {
 async function getData() {
   const query = `*[_type == "project"][0...3]`;
 
-  const data = await client.fetch(query, { next: { revalidate: 10 } });
+  const data = await client.fetch(query, { next: { revalidate: 0 } });
+
+  console.log(data);
 
   return data;
 }

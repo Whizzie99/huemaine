@@ -8,7 +8,7 @@ import { StyledList, StyledWrapper } from "./styles";
 async function getData() {
   const query = `*[_type == "post"]`;
 
-  const data = await client.fetch(query, { next: { revalidate: 50 } });
+  const data = await client.fetch(query, { next: { revalidate: 0 } });
 
   return data;
 }
