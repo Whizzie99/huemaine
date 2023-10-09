@@ -199,6 +199,7 @@ export const StyledBtns = styled.div`
 
     button {
       width: 40%;
+      padding: 1.4em;
     }
   }
 `;

@@ -74,7 +74,7 @@ export const brands: Brand[] = [
   },
   {
     id: 12,
-    img: forbes.src,
+    img: kiitec.src,
     text: "repdoor logo",
   },
 ];

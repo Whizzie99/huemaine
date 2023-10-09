@@ -1,9 +1,16 @@
+import Link from "next/link";
+import { PiArrowRightLight } from "react-icons/pi";
 import { Suspense } from "react";
 import { client } from "@/lib/sanity";
 import { Project } from "@/lib/interface";
 import Container from "@/components/shared/Container/Container";
 import WonderCard from "../WonderCard/WonderCard";
-import { StyledWrapper, StyledSection, StyledProjectsGrid } from "./styles";
+import {
+  StyledWrapper,
+  StyledSection,
+  StyledProjectsGrid,
+  StyledExploreBtn,
+} from "./styles";
 
 async function getData() {
   const query = `*[_type == "project"][0...3]`;
@@ -26,9 +33,8 @@ export default async function Wonders() {
             huemaine wonders
           </h2>
           <p>
-            orem ipsum dolor sit amet consectetur. Nisl erat non rhoncus eget
-            velit et lectus ut. Est nunc facilisi sapien dictumst viverra. Amet
-            fermentum donec tempor turpis. Urna mauris nam aliquam urna{" "}
+            Unlock the palette of possibilities and embark on a journey through
+            the Huemaine universe where imagination knows no bounds.
           </p>
           <Suspense fallback={<p>loading...</p>}>
             <StyledProjectsGrid>
@@ -42,6 +48,14 @@ export default async function Wonders() {
                 />
               ))}
             </StyledProjectsGrid>
+            <StyledExploreBtn>
+              <Link href="#">
+                <span>explore</span>
+                <span>
+                  <PiArrowRightLight />
+                </span>
+              </Link>
+            </StyledExploreBtn>
           </Suspense>
         </StyledSection>
       </Container>

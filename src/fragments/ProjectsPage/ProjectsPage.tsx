@@ -8,8 +8,7 @@ export default function ProjectsPage() {
     <>
       <MiniHero
         title="projects"
-        subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-        corporis, voluptates sint animi magnam veniam"
+        subtitle="Discover our creative tapestry, where every project weaves a unique story of excellence and innovation."
         bgImg="/images/contour-bg-2.webp"
       />
       <Suspense fallback={<p>loading...</p>}>

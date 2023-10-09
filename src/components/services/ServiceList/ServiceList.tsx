@@ -8,10 +8,13 @@ const ServiceList = () => {
     <StyledWrapper>
       <Container>
         <StyledShortTxt>
-          orem ipsum dolor sit amet consectetur. Pellentesque donec sagittis
-          pharetra luctus id faucibus viverra. Aliquam orci ac odio egestas arcu
-          tristique sed facilisis vulputate. Leo mattis dignissim viverra purus
-          enim ultricies duis blandit.
+          Huemaine, the leading creative and PR agency, offers a diverse array
+          of services meticulously designed to elevate brands, drive engagement,
+          and foster meaningful connections with audiences. With a passion for
+          creativity and a mastery of public relations, Huemaine takes pride in
+          delivering innovative, tailored solutions to clients across
+          industries. Here&apos;s an in-depth look at the comprehensive services
+          offered by Huemaine:
         </StyledShortTxt>
         <StyledServicesGrid>
           {services.map((service) => (
