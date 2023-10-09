@@ -3,7 +3,7 @@ import ProjectsList from "@/components/projects/ProjectsList/ProjectsList";
 import MiniHero from "@/components/shared/MiniHero/MiniHero";
 import RecentRamblings from "@/components/shared/RecentRamblings/RecentRamblings";
 
-const ProjectsPage = () => {
+export default function ProjectsPage () {
   return (
     <>
       <MiniHero
@@ -18,6 +18,4 @@ const ProjectsPage = () => {
       <RecentRamblings />
     </>
   );
-};
-
-export default ProjectsPage;
+}
