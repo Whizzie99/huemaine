@@ -18,7 +18,7 @@ export const sendEmailAction = async (prevState: any, formData: FormData) => {
       subject: subject,
       text: message,
     });
-    console.log("email sent!");
+    // console.log("email sent!");
     // console.log(data);
     return {
       message: 'Thanks, your message has been sent!'
