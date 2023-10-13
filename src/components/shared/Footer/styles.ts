@@ -123,6 +123,8 @@ export const StyledBtns = styled.div`
 
   a {
     all: unset;
+    user-select: none;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,7 +135,7 @@ export const StyledBtns = styled.div`
     border: 0.01em solid var(--white);
     text-transform: capitalize;
     text-decoration: none;
-    padding: 1em;
+    padding: 0.8em;
     transition: all 0.3s ease;
 
     span {
@@ -194,7 +196,7 @@ export const StyledBtns = styled.div`
     justify-content: flex-start;
 
     a {
-      width: 40%;
+      width: 30%;
     }
 
     button {

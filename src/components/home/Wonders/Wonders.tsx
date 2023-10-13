@@ -17,7 +17,7 @@ async function getData() {
 
   const data = await client.fetch(query, { next: { revalidate: 0 } });
 
-  console.log(data);
+  // console.log(data);
 
   return data;
 }
