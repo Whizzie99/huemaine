@@ -18,7 +18,7 @@ export const StyledWrapper = styled.div`
   left: 0;
   width: 100%;
   padding: 1em;
-  z-index: 97;
+  z-index: 96;
 `;
 
 export const StyledNav = styled.div<ScrolledProps>`
@@ -31,7 +31,7 @@ export const StyledNav = styled.div<ScrolledProps>`
   padding: 0.5em 1em;
   transition: all 0.3s ease;
   border-radius: 0.3em;
-  z-index: 99;
+  z-index: 98;
 `;
 
 export const StyledLogo = styled.div<ScrolledProps>`
@@ -142,7 +142,7 @@ export const StyledMenuItems = styled.div`
   height: 100vh;
   width: 100%;
   background: var(--black-2);
-  z-index: 98;
+  z-index: 97;
 
   ul {
     list-style: none;

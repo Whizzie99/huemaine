@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
+import { useSearchParams, usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import Container from "../Container/Container";
+import ContactModal from "../ContactModal/ContactModal";
 import { PiArrowRightLight } from "react-icons/pi";
 import {
   StyledWrapper,
@@ -23,6 +26,9 @@ import sample2 from "../../../../public/images/shapes.jpeg";
 
 const Footer: React.FC = () => {
   const currentYear: number = new Date().getFullYear();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const showModal = searchParams.has("modal");
 
   return (
     <StyledWrapper id="contact">
@@ -47,12 +53,12 @@ const Footer: React.FC = () => {
                       <PiArrowRightLight />
                     </span>
                   </Link>
-                  <button>
+                  <Link href={`${pathname}?modal=true`}>
                     <span>send a message</span>
                     <span>
                       <PiArrowRightLight />
                     </span>
-                  </button>
+                  </Link>
                 </StyledBtns>
               </StyledContent>
             </StyledSectionLeft>
@@ -99,6 +105,7 @@ const Footer: React.FC = () => {
           </StyledBottomSection>
         </StyledSection>
       </Container>
+      {showModal && <ContactModal />}
     </StyledWrapper>
   );
 };
