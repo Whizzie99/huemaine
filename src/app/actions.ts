@@ -1,5 +1,4 @@
 "use server";
-import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_EMAIL_API);
@@ -21,8 +20,8 @@ export const sendEmailAction = async (prevState: any, formData: FormData) => {
     // console.log("email sent!");
     // console.log(data);
     return {
-      message: 'Thanks, your message has been sent!'
-    }
+      message: "Thanks, your message has been sent!",
+    };
     // return NextResponse.json(data);
   } catch (error) {
     // return NextResponse.json({ error });

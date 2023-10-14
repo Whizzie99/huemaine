@@ -45,21 +45,21 @@ export const StyledCloseBtn = styled.div`
 `;
 
 export const StyledForm = styled.form`
-  > p{
+  > p {
     padding: 0.5em 1em;
     text-align: center;
     font-family: var(--font-alegreya);
     text-transform: capitalize;
     margin: 0.3em 0;
 
-    &.success-msg{
-      background: #79EB98;
-      color: #3C754B;
+    &.success-msg {
+      background: #79eb98;
+      color: #3c754b;
     }
 
-    &.error-msg{
-      background: #FF6666;
-      color: #943B3B;
+    &.error-msg {
+      background: #ff6666;
+      color: #943b3b;
     }
   }
 `;
@@ -118,7 +118,7 @@ export const StyledSubmitBtn = styled.button`
     }
   }
 
-  .loading-msg{
+  .loading-msg {
     color: var(--white);
     font-family: var(--font-alegreya);
     text-transform: capitalize;

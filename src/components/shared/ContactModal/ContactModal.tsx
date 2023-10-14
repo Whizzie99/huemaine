@@ -48,9 +48,8 @@ const SubmitBtn = () => {
 const ContactModal = () => {
   const router = useRouter();
   const [state, formAction] = useFormState(sendEmailAction, initialState);
-
-
-  console.log(state?.message);
+  const successMsg: string = "Thanks, your message has been sent!";
+  const errorMsg: string = "Sorry, your message failed to send";
 
   const [formData, setFormData] = useState<FormDataObj>({
     fullName: "",
@@ -61,12 +60,7 @@ const ContactModal = () => {
 
   const handleChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData);
   };
-
-  // const handleFormDataAction = async(formdata: FormData) => {
-  //   await sendEmail(formdata);
-  // }
 
   return (
     <StyledWrapper>
@@ -78,12 +72,16 @@ const ContactModal = () => {
         </StyledCloseBtn>
         <h2>send us a message</h2>
         <StyledForm action={formAction}>
-          {
-            state?.message == 'Thanks, your message has been sent!' && <p className="success-msg" aria-live="polite">{state?.message}</p>
-          }
-          {
-            state?.message == 'Sorry, your message failed to send' && <p className="error-msg" aria-live="polite">{state?.message}</p>
-          }
+          {state?.message == successMsg && (
+            <p className="success-msg" aria-live="polite">
+              {state?.message}
+            </p>
+          )}
+          {state?.message == errorMsg && (
+            <p className="error-msg" aria-live="polite">
+              {state?.message}
+            </p>
+          )}
           <StyledFormGroup>
             <label htmlFor="full-name">Full Name</label>
             <input
@@ -126,7 +124,7 @@ const ContactModal = () => {
               onChange={(e) => handleChange(e)}
             ></textarea>
           </StyledFormGroup>
-          <SubmitBtn/>
+          <SubmitBtn />
         </StyledForm>
       </StyledContent>
     </StyledWrapper>
