@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Moment from "react-moment";
 import { urlFor } from "@/lib/sanityImageUrl";
@@ -40,6 +40,14 @@ const SingleBlog: React.FC<Props> = ({ title, img, date, content, author }) => {
       ),
     },
   };
+
+  useEffect(() => {
+    (async () => {
+      // @ts-expect-error
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
 
   return (
     <StyledWrapper>
