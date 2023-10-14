@@ -1,8 +1,17 @@
-// import BlogHero from "@/components/blog/BlogHero/BlogHero";
+"use client";
+import { useEffect } from "react";
 import MiniHero from "@/components/shared/MiniHero/MiniHero";
 import BlogList from "@/components/blog/BlogList/BlogList";
 
 export default function BlogPage() {
+  useEffect(() => {
+    (async () => {
+      // @ts-expect-error
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
   return (
     <>
       <MiniHero

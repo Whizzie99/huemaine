@@ -1,8 +1,17 @@
-import ServicesHero from "@/components/services/ServicesHero/ServicesHero";
+"use client";
+import { useEffect } from "react";
 import MiniHero from "@/components/shared/MiniHero/MiniHero";
 import ServiceList from "@/components/services/ServiceList/ServiceList";
 
 export default function ServicesPage() {
+  useEffect(() => {
+    (async () => {
+      // @ts-expect-error
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
   return (
     <>
       <MiniHero
