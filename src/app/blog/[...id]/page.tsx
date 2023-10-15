@@ -12,6 +12,8 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 
   const post = data;
 
+  // console.log(urlFor(post.image).url());
+
 
   // console.log(urlFor(post.img).url());
   return {
@@ -20,7 +22,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     openGraph: {
       title: `Huemain | Blog - ${post.title}`,
       description: `${post.title?.substring(0, 30)}...`,
-      // images: [`${urlFor(post?.img).url()}`],
+      images: [`${urlFor(post.image).url()}`],
     },
   };
 }
