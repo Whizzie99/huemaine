@@ -62,7 +62,7 @@ const WonderCard: React.FC<Props> = ({ title, subtitle, img, url }) => {
   }, []);
 
   return (
-    <StyledCard>
+    <StyledCard ref={addElementRef}>
       <StyledImg ref={addElementRef}>
         <Image
           src={urlFor(img).url()}
