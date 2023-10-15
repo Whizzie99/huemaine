@@ -11,58 +11,58 @@ import { StyledWrapper, StyledSection, StyledExploreBtn } from "./styles";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function RecentRamlings() {
-  const elementsRef = useRef<HTMLElement[]>([]);
+  // const elementsRef = useRef<HTMLElement[]>([]);
 
-  const addElementRef = (element: HTMLElement | null) => {
-    if (element) {
-      elementsRef.current.push(element);
-    }
-  };
+  // const addElementRef = (element: HTMLElement | null) => {
+  //   if (element) {
+  //     elementsRef.current.push(element);
+  //   }
+  // };
 
-  useEffect(() => {
-    const elements = elementsRef.current;
+  // useEffect(() => {
+  //   const elements = elementsRef.current;
 
-    elements.forEach((element) => {
-      gsap.set(element, { opacity: 0, y: 50 });
+  //   elements.forEach((element) => {
+  //     gsap.set(element, { opacity: 0, y: 50 });
 
-      const tl = gsap.timeline({ paused: true });
-      tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+  //     const tl = gsap.timeline({ paused: true });
+  //     tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
 
-      ScrollTrigger.create({
-        trigger: element,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-        onEnter: () => {
-          tl.restart();
-        },
-        onEnterBack: () => {
-          tl.restart();
-        },
-        onLeave: () => {
-          tl.progress(0).pause();
-        },
-        onLeaveBack: () => {
-          tl.progress(0).pause();
-        },
-      });
-    });
+  //     ScrollTrigger.create({
+  //       trigger: element,
+  //       start: "top 80%",
+  //       end: "bottom 20%",
+  //       scrub: true,
+  //       onEnter: () => {
+  //         tl.restart();
+  //       },
+  //       onEnterBack: () => {
+  //         tl.restart();
+  //       },
+  //       onLeave: () => {
+  //         tl.progress(0).pause();
+  //       },
+  //       onLeaveBack: () => {
+  //         tl.progress(0).pause();
+  //       },
+  //     });
+  //   });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+  //   return () => {
+  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  //   };
+  // }, []);
 
   return (
     <StyledWrapper>
       <Container>
         <StyledSection>
-          <h2 ref={addElementRef}>
+          <h2>
             recent
             <br />
             ramblings
           </h2>
-          <p ref={addElementRef}>
+          <p>
             Dive into our recent ramblings, where insights and ideas collide to
             spark new horizons in thought and action.
           </p>
@@ -70,7 +70,7 @@ export default function RecentRamlings() {
             <RecentRamblingsGrid />
           </Suspense>
           <StyledExploreBtn>
-            <Link href="/blog" ref={addElementRef}>
+            <Link href="/blog">
               <span>view more</span>
               <span>
                 <PiArrowRightLight />

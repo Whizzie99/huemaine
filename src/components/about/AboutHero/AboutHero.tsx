@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   StyledWrapper,
   StyledTopgraphicImg,
@@ -15,50 +15,50 @@ import topographicImg from "../../../../public/images/topographic.png";
 import img1 from "../../../../public/images/luxury-1.jpeg";
 import img2 from "../../../../public/images/bike.jpeg";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const AboutHero = () => {
-  const elementsRef = useRef<HTMLElement[]>([]);
+  // const elementsRef = useRef<HTMLElement[]>([]);
 
-  const addElementRef = (element: HTMLElement | null) => {
-    if (element) {
-      elementsRef.current.push(element);
-    }
-  };
+  // const addElementRef = (element: HTMLElement | null) => {
+  //   if (element) {
+  //     elementsRef.current.push(element);
+  //   }
+  // };
 
-  useEffect(() => {
-    const elements = elementsRef.current;
+  // useEffect(() => {
+  //   const elements = elementsRef.current;
 
-    elements.forEach((element) => {
-      gsap.set(element, { opacity: 0, y: 50 });
+  //   elements.forEach((element) => {
+  //     gsap.set(element, { opacity: 0, y: 50 });
 
-      const tl = gsap.timeline({ paused: true });
-      tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+  //     const tl = gsap.timeline({ paused: true });
+  //     tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
 
-      ScrollTrigger.create({
-        trigger: element,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-        onEnter: () => {
-          tl.restart();
-        },
-        onEnterBack: () => {
-          tl.restart();
-        },
-        onLeave: () => {
-          tl.progress(0).pause();
-        },
-        onLeaveBack: () => {
-          tl.progress(0).pause();
-        },
-      });
-    });
+  //     ScrollTrigger.create({
+  //       trigger: element,
+  //       start: "top 80%",
+  //       end: "bottom 20%",
+  //       scrub: true,
+  //       onEnter: () => {
+  //         tl.restart();
+  //       },
+  //       onEnterBack: () => {
+  //         tl.restart();
+  //       },
+  //       onLeave: () => {
+  //         tl.progress(0).pause();
+  //       },
+  //       onLeaveBack: () => {
+  //         tl.progress(0).pause();
+  //       },
+  //     });
+  //   });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+  //   return () => {
+  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  //   };
+  // }, []);
 
   return (
     <StyledWrapper>
@@ -73,11 +73,11 @@ const AboutHero = () => {
       </StyledTopgraphicImg>
       <StyledContent>
         <h1>
-          <span ref={addElementRef}>unmasking</span>
-          <span ref={addElementRef}>our</span>
-          <span ref={addElementRef}>essence</span>
+          <span>unmasking</span>
+          <span>our</span>
+          <span>essence</span>
         </h1>
-        <StyledImg1 ref={addElementRef}>
+        <StyledImg1>
           <Image
             src={img1}
             alt="huemaine lifestyle"
@@ -88,7 +88,7 @@ const AboutHero = () => {
             blurDataURL={img1.blurDataURL}
           />
         </StyledImg1>
-        <StyledImg2 ref={addElementRef}>
+        <StyledImg2>
           <Image
             src={img2}
             alt="huemaine bike"

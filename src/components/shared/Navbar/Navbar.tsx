@@ -35,13 +35,13 @@ const Navbar: React.FC = () => {
     setChangeToBlack(false);
   };
 
-  useEffect(() => {
-    (async () => {
-      // @ts-expect-error
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     // @ts-expect-error
+  //     const LocomotiveScroll = (await import("locomotive-scroll")).default;
+  //     const locomotiveScroll = new LocomotiveScroll();
+  //   })();
+  // }, []);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
@@ -130,12 +130,7 @@ const Navbar: React.FC = () => {
                 </li>
               ))}
               <li>
-                <Link
-                  data-scroll
-                  href="#contact"
-                  onClick={handleHideMenu}
-                  data-scroll-to-href="#contact"
-                >
+                <Link href="#contact" onClick={handleHideMenu}>
                   contact
                 </Link>
               </li>

@@ -2,12 +2,12 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { urlFor } from "@/lib/sanityImageUrl";
 import { StyledCard, StyledImg, StyledTitle, StyledBtn } from "./styles";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 // import sample from "../../../../public/images/projects/1.jpeg";
 
@@ -19,51 +19,51 @@ interface Props {
 }
 
 const WonderCard: React.FC<Props> = ({ title, subtitle, img, url }) => {
-  const elementsRef = useRef<HTMLElement[]>([]);
+  // const elementsRef = useRef<HTMLElement[]>([]);
 
-  const addElementRef = (element: HTMLElement | null) => {
-    if (element) {
-      elementsRef.current.push(element);
-    }
-  };
+  // const addElementRef = (element: HTMLElement | null) => {
+  //   if (element) {
+  //     elementsRef.current.push(element);
+  //   }
+  // };
 
-  useEffect(() => {
-    const elements = elementsRef.current;
+  // useEffect(() => {
+  //   const elements = elementsRef.current;
 
-    elements.forEach((element) => {
-      gsap.set(element, { opacity: 0, y: 50 });
+  //   elements.forEach((element) => {
+  //     gsap.set(element, { opacity: 0, y: 50 });
 
-      const tl = gsap.timeline({ paused: true });
-      tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+  //     const tl = gsap.timeline({ paused: true });
+  //     tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
 
-      ScrollTrigger.create({
-        trigger: element,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-        onEnter: () => {
-          tl.restart();
-        },
-        onEnterBack: () => {
-          tl.restart();
-        },
-        onLeave: () => {
-          tl.progress(0).pause();
-        },
-        onLeaveBack: () => {
-          tl.progress(0).pause();
-        },
-      });
-    });
+  //     ScrollTrigger.create({
+  //       trigger: element,
+  //       start: "top 80%",
+  //       end: "bottom 20%",
+  //       scrub: true,
+  //       onEnter: () => {
+  //         tl.restart();
+  //       },
+  //       onEnterBack: () => {
+  //         tl.restart();
+  //       },
+  //       onLeave: () => {
+  //         tl.progress(0).pause();
+  //       },
+  //       onLeaveBack: () => {
+  //         tl.progress(0).pause();
+  //       },
+  //     });
+  //   });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+  //   return () => {
+  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  //   };
+  // }, []);
 
   return (
-    <StyledCard ref={addElementRef}>
-      <StyledImg ref={addElementRef}>
+    <StyledCard>
+      <StyledImg>
         <Image
           src={urlFor(img).url()}
           alt="sample"
@@ -73,10 +73,10 @@ const WonderCard: React.FC<Props> = ({ title, subtitle, img, url }) => {
         />
       </StyledImg>
       <StyledTitle>
-        <h4 ref={addElementRef}>{subtitle}</h4>
-        <h3 ref={addElementRef}>{title}</h3>
+        <h4>{subtitle}</h4>
+        <h3>{title}</h3>
       </StyledTitle>
-      <StyledBtn ref={addElementRef}>
+      <StyledBtn>
         <Link href={url} target="_blank">
           <span>view the</span>
           <span>
