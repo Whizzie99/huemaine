@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
@@ -18,9 +18,7 @@ import founderImg from "../../../../public/images/chisom-njoku.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const MeetTheFounder = () => {
-
   const elementsRef = useRef<HTMLElement[]>([]);
 
   const addElementRef = (element: HTMLElement | null) => {
@@ -62,7 +60,6 @@ const MeetTheFounder = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
-
 
   return (
     <StyledWrapper>

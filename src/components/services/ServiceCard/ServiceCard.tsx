@@ -1,5 +1,5 @@
-'use client';
-import React, {useEffect, useRef} from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,7 +14,6 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 interface Props {
   title: string;
   description: string;
@@ -28,7 +27,6 @@ const ServiceCard: React.FC<Props> = ({
   serviceItems,
   img,
 }) => {
-
   const elementsRef = useRef<HTMLElement[]>([]);
 
   const addElementRef = (element: HTMLElement | null) => {
@@ -71,7 +69,6 @@ const ServiceCard: React.FC<Props> = ({
     };
   }, []);
 
-
   return (
     <StyledCard>
       <StyledCardLeft className="service-card-left">
@@ -79,7 +76,9 @@ const ServiceCard: React.FC<Props> = ({
         <p ref={addElementRef}>{description}</p>
         <ul>
           {serviceItems.map((item, index) => (
-            <li key={index} ref={addElementRef}>- {item}</li>
+            <li key={index} ref={addElementRef}>
+              - {item}
+            </li>
           ))}
         </ul>
       </StyledCardLeft>

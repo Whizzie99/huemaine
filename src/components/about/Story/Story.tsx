@@ -31,7 +31,6 @@ const Story = () => {
     }
   };
 
-
   useEffect(() => {
     const div: any = divRef.current;
     const elemParent = document.querySelector(".distort-img");
@@ -45,7 +44,6 @@ const Story = () => {
     });
   }, []);
 
-  
   useEffect(() => {
     const elements = elementsRef.current;
 

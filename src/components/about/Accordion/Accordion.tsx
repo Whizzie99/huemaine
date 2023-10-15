@@ -14,7 +14,6 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Accordion = () => {
   const [clicked, setClicked] = useState<boolean | null | number>(false);
 
@@ -25,7 +24,6 @@ const Accordion = () => {
 
     setClicked(index);
   };
-
 
   const elementsRef = useRef<HTMLElement[]>([]);
 

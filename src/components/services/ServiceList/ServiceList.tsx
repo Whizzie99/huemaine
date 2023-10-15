@@ -8,9 +8,7 @@ import { StyledShortTxt, StyledWrapper, StyledServicesGrid } from "./styles";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const ServiceList = () => {
-
   const elementsRef = useRef<HTMLElement[]>([]);
 
   const addElementRef = (element: HTMLElement | null) => {
@@ -52,7 +50,6 @@ const ServiceList = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
-
 
   return (
     <StyledWrapper>

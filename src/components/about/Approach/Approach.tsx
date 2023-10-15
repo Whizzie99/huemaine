@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,12 +6,9 @@ import Container from "@/components/shared/Container/Container";
 import Accordion from "../Accordion/Accordion";
 import { StyledWrapper, StyledSection, StyledDiveDeeper } from "./styles";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Approach = () => {
-
   const elementsRef = useRef<HTMLElement[]>([]);
 
   const addElementRef = (element: HTMLElement | null) => {
