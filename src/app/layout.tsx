@@ -31,7 +31,12 @@ const oswald = Oswald({
 
 export const metadata: Metadata = {
   title: "Huemaine | Home",
-  description: "Illuminating Brands with Creative Brilliance and PR Expertise"
+  description: "Illuminating Brands with Creative Brilliance and PR Expertise",
+  openGraph: {
+    images: [
+      "https://res.cloudinary.com/df6nau7iu/image/upload/v1697359027/og-image_oujcci.jpg",
+    ],
+  },
 };
 
 export default function RootLayout({
