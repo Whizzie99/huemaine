@@ -11,13 +11,16 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   const data = await client.fetch(query, { next: { revalidate: 0 } });
 
   const post = data;
+
+
+  // console.log(urlFor(post.img).url());
   return {
     title: `Huemain | Blog - ${post.title}`,
     description: `${post.title?.substring(0, 30)}...`,
     openGraph: {
       title: `Huemain | Blog - ${post.title}`,
       description: `${post.title?.substring(0, 30)}...`,
-      images: [`${urlFor(post.img).url()}`],
+      // images: [`${urlFor(post?.img).url()}`],
     },
   };
 }
