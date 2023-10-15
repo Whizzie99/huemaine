@@ -1,57 +1,76 @@
-import { Suspense } from "react";
+"use client";
+import { Suspense, useEffect, useRef } from "react";
 import Link from "next/link";
-import { client } from "@/lib/sanity";
-import { Post } from "@/lib/interface";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { PiArrowRightLight } from "react-icons/pi";
 import Container from "../Container/Container";
-import BlogCard from "../BlogCard/BlogCard";
-import {
-  StyledWrapper,
-  StyledSection,
-  StyledGrid,
-  StyledExploreBtn,
-} from "./styles";
+import RecentRamblingsGrid from "../RecentRamblingsGrid/RecentRamblingsGrid";
+import { StyledWrapper, StyledSection, StyledExploreBtn } from "./styles";
 
-async function getData() {
-  const query = `*[_type == "post"][0...3]`;
+gsap.registerPlugin(ScrollTrigger);
 
-  const data = await client.fetch(query, { next: { path: "/" } });
+export default function RecentRamlings() {
+  const elementsRef = useRef<HTMLElement[]>([]);
 
-  return data;
-}
+  const addElementRef = (element: HTMLElement | null) => {
+    if (element) {
+      elementsRef.current.push(element);
+    }
+  };
 
-export default async function RecentRamlings() {
-  const data = (await getData()) as Post[];
+  useEffect(() => {
+    const elements = elementsRef.current;
+
+    elements.forEach((element) => {
+      gsap.set(element, { opacity: 0, y: 50 });
+
+      const tl = gsap.timeline({ paused: true });
+      tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+
+      ScrollTrigger.create({
+        trigger: element,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+        onEnter: () => {
+          tl.restart();
+        },
+        onEnterBack: () => {
+          tl.restart();
+        },
+        onLeave: () => {
+          tl.progress(0).pause();
+        },
+        onLeaveBack: () => {
+          tl.progress(0).pause();
+        },
+      });
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   return (
     <StyledWrapper>
       <Container>
         <StyledSection>
-          <h2>
+          <h2 ref={addElementRef}>
             recent
             <br />
             ramblings
           </h2>
-          <p>
+          <p ref={addElementRef}>
             Dive into our recent ramblings, where insights and ideas collide to
             spark new horizons in thought and action.
           </p>
           <Suspense fallback={<p>loading...</p>}>
-            <StyledGrid>
-              {data.map((post) => (
-                <BlogCard
-                  key={post._id}
-                  title={post.title}
-                  date={post._createdAt}
-                  img={post.image}
-                  slug={post.slug.current}
-                  id={post._id}
-                />
-              ))}
-            </StyledGrid>
+            <RecentRamblingsGrid />
           </Suspense>
           <StyledExploreBtn>
-            <Link href="#">
+            <Link href="/blog" ref={addElementRef}>
               <span>view more</span>
               <span>
                 <PiArrowRightLight />

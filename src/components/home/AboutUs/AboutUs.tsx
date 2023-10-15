@@ -1,6 +1,9 @@
 "use client";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
@@ -19,16 +22,60 @@ import {
   StyledMarqueeImage,
 } from "./styles";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const AboutUs = () => {
+  const elementsRef = useRef<HTMLElement[]>([]);
+
+  const addElementRef = (element: HTMLElement | null) => {
+    if (element) {
+      elementsRef.current.push(element);
+    }
+  };
+
+  useEffect(() => {
+    const elements = elementsRef.current;
+
+    elements.forEach((element) => {
+      gsap.set(element, { opacity: 0, y: 50 });
+
+      const tl = gsap.timeline({ paused: true });
+      tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+
+      ScrollTrigger.create({
+        trigger: element,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+        onEnter: () => {
+          tl.restart();
+        },
+        onEnterBack: () => {
+          tl.restart();
+        },
+        onLeave: () => {
+          tl.progress(0).pause();
+        },
+        onLeaveBack: () => {
+          tl.progress(0).pause();
+        },
+      });
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <StyledWrapper>
       <Container>
         <StyledContent>
           <h1>
-            <span>crafting connectivity,</span>
-            <span>painting possibilities</span>
+            <span ref={addElementRef}>crafting connectivity,</span>
+            <span ref={addElementRef}>painting possibilities</span>
           </h1>
-          <p>
+          <p ref={addElementRef}>
             In the fast-paced marketing and brand communication world, few
             agencies stand out like Huemaine. Founded with a vision to
             seamlessly blend creativity and public relations, Huemaine has
@@ -38,7 +85,7 @@ const AboutUs = () => {
             illuminate brands and stories, leaving a lasting impact on clients
             and consumers alike.
           </p>
-          <Link href="/about">
+          <Link href="/about" ref={addElementRef}>
             <span>explore</span>
             <span>
               <PiArrowRightLight />
@@ -47,9 +94,9 @@ const AboutUs = () => {
         </StyledContent>
       </Container>
       <StyledTrustedBrands>
-        <h3>brands that have trusted us</h3>
+        <h3 ref={addElementRef}>brands that have trusted us</h3>
 
-        <StyledCustomMarquee>
+        <StyledCustomMarquee ref={addElementRef}>
           <Swiper
             modules={[Autoplay]}
             slidesPerView={3}

@@ -36,6 +36,14 @@ const Navbar: React.FC = () => {
   };
 
   useEffect(() => {
+    (async () => {
+      // @ts-expect-error
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
+  useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
     const handleScroll = () => {
       if (window.scrollY > 200) {
@@ -121,6 +129,16 @@ const Navbar: React.FC = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  data-scroll
+                  href="#contact"
+                  onClick={handleHideMenu}
+                  data-scroll-to-href="#contact"
+                >
+                  contact
+                </Link>
+              </li>
             </ul>
           </StyledMenuItems>
         )}
