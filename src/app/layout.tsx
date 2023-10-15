@@ -31,7 +31,7 @@ const oswald = Oswald({
 
 export const metadata: Metadata = {
   title: "Huemaine | Home",
-  description: "Illuminating Brands with Creative Brilliance and PR Expertise",
+  description: "Illuminating Brands with Creative Brilliance and PR Expertise"
 };
 
 export default function RootLayout({
