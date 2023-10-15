@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     /* border: 0.01em solid red; */
   }
 
-  body{
+  /* body{
     scroll-behavior: smooth;
-  }
+  } */
 `;

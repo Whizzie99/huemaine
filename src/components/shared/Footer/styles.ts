@@ -123,7 +123,7 @@ export const StyledBtns = styled.div`
 
   a {
     all: unset;
-    user-select: none;
+    /* user-select: none; */
     cursor: pointer;
     display: flex;
     justify-content: center;

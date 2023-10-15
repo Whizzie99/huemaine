@@ -1,8 +1,8 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HiPlus, HiMinus } from "react-icons/hi2";
 import { approaches } from "../../../../db/approaches";
 import {
@@ -12,7 +12,7 @@ import {
   StyledContent,
 } from "./styles";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const Accordion = () => {
   const [clicked, setClicked] = useState<boolean | null | number>(false);
@@ -25,52 +25,52 @@ const Accordion = () => {
     setClicked(index);
   };
 
-  const elementsRef = useRef<HTMLElement[]>([]);
+  // const elementsRef = useRef<HTMLElement[]>([]);
 
-  const addElementRef = (element: HTMLElement | null) => {
-    if (element) {
-      elementsRef.current.push(element);
-    }
-  };
+  // const addElementRef = (element: HTMLElement | null) => {
+  //   if (element) {
+  //     elementsRef.current.push(element);
+  //   }
+  // };
 
-  useEffect(() => {
-    const elements = elementsRef.current;
+  // useEffect(() => {
+  //   const elements = elementsRef.current;
 
-    elements.forEach((element) => {
-      gsap.set(element, { opacity: 0, y: 50 });
+  //   elements.forEach((element) => {
+  //     gsap.set(element, { opacity: 0, y: 50 });
 
-      const tl = gsap.timeline({ paused: true });
-      tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+  //     const tl = gsap.timeline({ paused: true });
+  //     tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
 
-      ScrollTrigger.create({
-        trigger: element,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-        onEnter: () => {
-          tl.restart();
-        },
-        onEnterBack: () => {
-          tl.restart();
-        },
-        onLeave: () => {
-          tl.progress(0).pause();
-        },
-        onLeaveBack: () => {
-          tl.progress(0).pause();
-        },
-      });
-    });
+  //     ScrollTrigger.create({
+  //       trigger: element,
+  //       start: "top 80%",
+  //       end: "bottom 20%",
+  //       scrub: true,
+  //       onEnter: () => {
+  //         tl.restart();
+  //       },
+  //       onEnterBack: () => {
+  //         tl.restart();
+  //       },
+  //       onLeave: () => {
+  //         tl.progress(0).pause();
+  //       },
+  //       onLeaveBack: () => {
+  //         tl.progress(0).pause();
+  //       },
+  //     });
+  //   });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+  //   return () => {
+  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  //   };
+  // }, []);
 
   return (
     <StyledWrapper>
       {approaches.map((approach) => (
-        <StyledAccordion key={approach.id} ref={addElementRef}>
+        <StyledAccordion key={approach.id}>
           <StyledHeading onClick={() => toggle(approach.id)}>
             <h3>{approach.title}</h3>
             <span>{clicked === approach.id ? <HiMinus /> : <HiPlus />}</span>

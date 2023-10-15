@@ -95,6 +95,7 @@ export const StyledImg1 = styled.div`
     width: 100%;
     object-fit: cover;
     object-position: center;
+    filter: brightness(95%);
   }
 
   @media screen and (max-width: 756px) {

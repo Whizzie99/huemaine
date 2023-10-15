@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -31,13 +31,13 @@ interface Props {
 }
 
 const SingleBlog: React.FC<Props> = ({ title, img, date, content, author }) => {
-  const elementsRef = useRef<HTMLElement[]>([]);
+  // const elementsRef = useRef<HTMLElement[]>([]);
 
-  const addElementRef = (element: HTMLElement | null) => {
-    if (element) {
-      elementsRef.current.push(element);
-    }
-  };
+  // const addElementRef = (element: HTMLElement | null) => {
+  //   if (element) {
+  //     elementsRef.current.push(element);
+  //   }
+  // };
 
   const PortableTextComponent = {
     types: {
@@ -53,55 +53,55 @@ const SingleBlog: React.FC<Props> = ({ title, img, date, content, author }) => {
     },
   };
 
-  useEffect(() => {
-    const elements = elementsRef.current;
+  // useEffect(() => {
+  //   const elements = elementsRef.current;
 
-    elements.forEach((element) => {
-      gsap.set(element, { opacity: 0, y: 50 });
+  //   elements.forEach((element) => {
+  //     gsap.set(element, { opacity: 0, y: 50 });
 
-      const tl = gsap.timeline({ paused: true });
-      tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+  //     const tl = gsap.timeline({ paused: true });
+  //     tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
 
-      ScrollTrigger.create({
-        trigger: element,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-        onEnter: () => {
-          tl.restart();
-        },
-        onEnterBack: () => {
-          tl.restart();
-        },
-        onLeave: () => {
-          tl.progress(0).pause();
-        },
-        onLeaveBack: () => {
-          tl.progress(0).pause();
-        },
-      });
-    });
+  //     ScrollTrigger.create({
+  //       trigger: element,
+  //       start: "top 80%",
+  //       end: "bottom 20%",
+  //       scrub: true,
+  //       onEnter: () => {
+  //         tl.restart();
+  //       },
+  //       onEnterBack: () => {
+  //         tl.restart();
+  //       },
+  //       onLeave: () => {
+  //         tl.progress(0).pause();
+  //       },
+  //       onLeaveBack: () => {
+  //         tl.progress(0).pause();
+  //       },
+  //     });
+  //   });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+  //   return () => {
+  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  //   };
+  // }, []);
 
-  useEffect(() => {
-    (async () => {
-      // @ts-expect-error
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     // @ts-expect-error
+  //     const LocomotiveScroll = (await import("locomotive-scroll")).default;
+  //     const locomotiveScroll = new LocomotiveScroll();
+  //   })();
+  // }, []);
 
   return (
     <StyledWrapper>
       <Container>
         <StyledSection>
           <BreadCrumb />
-          <StyledTitle ref={addElementRef}>{title}</StyledTitle>
-          <StyledContentImg ref={addElementRef}>
+          <StyledTitle>{title}</StyledTitle>
+          <StyledContentImg>
             <Image
               src={urlFor(img).url()}
               alt={title}
@@ -110,14 +110,14 @@ const SingleBlog: React.FC<Props> = ({ title, img, date, content, author }) => {
               priority
             />
           </StyledContentImg>
-          <StyledDate ref={addElementRef}>
+          <StyledDate>
             <Moment format="MMM Do YYYY">{date}</Moment>
           </StyledDate>
-          <StyledContent ref={addElementRef}>
+          <StyledContent>
             <PortableText value={content} components={PortableTextComponent} />
             <StyledAuthor>
-              <span ref={addElementRef}>posted by</span>
-              <p ref={addElementRef}>{author}</p>
+              <span>posted by</span>
+              <p>{author}</p>
             </StyledAuthor>
           </StyledContent>
         </StyledSection>

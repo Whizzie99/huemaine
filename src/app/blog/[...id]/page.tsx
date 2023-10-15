@@ -12,10 +12,6 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 
   const post = data;
 
-  // console.log(urlFor(post.image).url());
-
-
-  // console.log(urlFor(post.img).url());
   return {
     title: `Huemain | Blog - ${post.title}`,
     description: `${post.title?.substring(0, 30)}...`,

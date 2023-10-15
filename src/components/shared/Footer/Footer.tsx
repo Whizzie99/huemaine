@@ -30,6 +30,7 @@ const Footer: React.FC = () => {
   const searchParams = useSearchParams();
   const showModal = searchParams.has("modal");
   // console.log(pathname);
+  
 
   return (
     <StyledWrapper id="contact">
@@ -46,6 +47,7 @@ const Footer: React.FC = () => {
                 <p>
                   Ready to embark on a journey with us? Connect with us today,
                   and let&apos;s start crafting your unique story together!
+                  {/* `${pathname}?modal=true` */}
                 </p>
                 <StyledBtns>
                   <Link href="#">
@@ -54,7 +56,12 @@ const Footer: React.FC = () => {
                       <PiArrowRightLight />
                     </span>
                   </Link>
-                  <Link href={`${pathname}?modal=true`}>
+                  <Link href={{
+                    pathname: pathname,
+                    query: {
+                      modal: true
+                    }
+                  }}>
                     <span>send a message</span>
                     <span>
                       <PiArrowRightLight />
