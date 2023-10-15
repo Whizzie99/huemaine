@@ -1,5 +1,5 @@
 "use client";
-import { Suspense, useEffect } from "react";
+import { useEffect } from "react";
 import Hero from "@/components/home/Hero/Hero";
 import AboutUs from "@/components/home/AboutUs/AboutUs";
 import Services from "@/components/home/Services/Services";
@@ -23,9 +23,7 @@ export default function HomePage() {
       <Services />
       <Wonders />
       <Brands />
-      <Suspense fallback={<p>loading...</p>}>
-        <RecentRamblings />
-      </Suspense>
+      <RecentRamblings />
     </>
   );
 }

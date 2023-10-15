@@ -36,6 +36,11 @@ export const StyledImg = styled.div`
 
   @media screen and (min-width: 1200px) {
     width: 70%;
+
+    img {
+      filter: brightness(60%);
+      z-index: 1;
+    }
   }
 `;
 
@@ -58,7 +63,6 @@ export const StyledTitle = styled.div`
   }
 
   h3 {
-    position: relative;
     text-transform: capitalize;
     margin-top: 0.5em;
     font-size: 1.9em;
@@ -67,7 +71,7 @@ export const StyledTitle = styled.div`
     color: var(--black-1);
     width: 100%;
     mix-blend-mode: difference;
-    z-index: 1;
+    z-index: 2;
     filter: invert(100%);
     line-height: 1.2;
   }
@@ -77,13 +81,17 @@ export const StyledTitle = styled.div`
     top: 6em;
     left: 0;
     h4 {
+      position: relative;
       font-size: 1em;
+      z-index: 2;
     }
 
     h3 {
+      position: relative;
       font-size: 3.5em;
       width: 55%;
       margin-top: 1.3em;
+      z-index: 2;
     }
   }
 `;

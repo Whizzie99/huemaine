@@ -1,57 +1,75 @@
+"use client";
+import { Suspense, useEffect, useRef } from "react";
 import Link from "next/link";
 import { PiArrowRightLight } from "react-icons/pi";
-import { Suspense } from "react";
-import { client } from "@/lib/sanity";
-import { Project } from "@/lib/interface";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "@/components/shared/Container/Container";
-import WonderCard from "../WonderCard/WonderCard";
-import {
-  StyledWrapper,
-  StyledSection,
-  StyledProjectsGrid,
-  StyledExploreBtn,
-} from "./styles";
+import WondersGrid from "../WondersGrid/WondersGrid";
+import { StyledWrapper, StyledSection, StyledExploreBtn } from "./styles";
 
-async function getData() {
-  const query = `*[_type == "project"][0...3]`;
+gsap.registerPlugin(ScrollTrigger);
 
-  const data = await client.fetch(query, { next: { path: "/" } });
+export default function Wonders() {
+  const elementsRef = useRef<HTMLElement[]>([]);
 
-  // console.log(data);
+  const addElementRef = (element: HTMLElement | null) => {
+    if (element) {
+      elementsRef.current.push(element);
+    }
+  };
 
-  return data;
-}
+  useEffect(() => {
+    const elements = elementsRef.current;
 
-export default async function Wonders() {
-  const data = (await getData()) as Project[];
+    elements.forEach((element) => {
+      gsap.set(element, { opacity: 0, y: 50 });
+
+      const tl = gsap.timeline({ paused: true });
+      tl.to(element, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+
+      ScrollTrigger.create({
+        trigger: element,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+        onEnter: () => {
+          tl.restart();
+        },
+        onEnterBack: () => {
+          tl.restart();
+        },
+        onLeave: () => {
+          tl.progress(0).pause();
+        },
+        onLeaveBack: () => {
+          tl.progress(0).pause();
+        },
+      });
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   return (
     <StyledWrapper>
       <Container>
         <StyledSection>
-          <h2>
+          <h2 ref={addElementRef}>
             a world of
             <br />
             huemaine wonders
           </h2>
-          <p>
+          <p ref={addElementRef}>
             Unlock the palette of possibilities and embark on a journey through
             the Huemaine universe where imagination knows no bounds.
           </p>
           <Suspense fallback={<p>loading...</p>}>
-            <StyledProjectsGrid>
-              {data.map((project) => (
-                <WonderCard
-                  key={project._id}
-                  title={project.title}
-                  subtitle={project.subtitle}
-                  img={project.image}
-                  url={project.url}
-                />
-              ))}
-            </StyledProjectsGrid>
+            <WondersGrid />
             <StyledExploreBtn>
-              <Link href="#">
+              <Link href="/projects" ref={addElementRef}>
                 <span>explore</span>
                 <span>
                   <PiArrowRightLight />

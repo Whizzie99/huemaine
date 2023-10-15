@@ -26,13 +26,8 @@ export const navItems: NavItem[] = [
     path: "/services",
   },
   {
-    id: 4,
+    id: 5,
     title: "blog",
     path: "/blog",
-  },
-  {
-    id: 5,
-    title: "contact",
-    path: "/#contact",
   },
 ];

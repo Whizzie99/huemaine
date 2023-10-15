@@ -29,6 +29,7 @@ const Footer: React.FC = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const showModal = searchParams.has("modal");
+  // console.log(pathname);
 
   return (
     <StyledWrapper id="contact">
