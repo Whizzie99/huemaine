@@ -20,9 +20,7 @@ import BreadCrumb from "@/components/shared/BreadCrumb/BreadCrumb";
 // import sample from "../../../../public/images/lifestyle.jpeg";
 import { PortableText } from "@portabletext/react";
 
-
 gsap.registerPlugin(ScrollTrigger);
-
 
 interface Props {
   title: string;
@@ -33,7 +31,6 @@ interface Props {
 }
 
 const SingleBlog: React.FC<Props> = ({ title, img, date, content, author }) => {
-
   const elementsRef = useRef<HTMLElement[]>([]);
 
   const addElementRef = (element: HTMLElement | null) => {
@@ -55,8 +52,6 @@ const SingleBlog: React.FC<Props> = ({ title, img, date, content, author }) => {
       ),
     },
   };
-
-  
 
   useEffect(() => {
     const elements = elementsRef.current;
@@ -119,7 +114,7 @@ const SingleBlog: React.FC<Props> = ({ title, img, date, content, author }) => {
             <Moment format="MMM Do YYYY">{date}</Moment>
           </StyledDate>
           <StyledContent ref={addElementRef}>
-            <PortableText value={content} components={PortableTextComponent}/>
+            <PortableText value={content} components={PortableTextComponent} />
             <StyledAuthor>
               <span ref={addElementRef}>posted by</span>
               <p ref={addElementRef}>{author}</p>

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
@@ -18,7 +18,6 @@ import img2 from "../../../../public/images/bike.jpeg";
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutHero = () => {
-
   const elementsRef = useRef<HTMLElement[]>([]);
 
   const addElementRef = (element: HTMLElement | null) => {
